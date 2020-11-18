@@ -32,7 +32,7 @@ void CLemploye::ajouter(string oui)
 	}
 	else
 	{
-		break;
+		
 	}
 }
 
@@ -47,6 +47,6 @@ void CLemploye::supprimer(string oui)
 	}
 	else
 	{
-		break;
+		
 	}
 }
