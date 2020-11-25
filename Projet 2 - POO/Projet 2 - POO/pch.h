@@ -3,7 +3,10 @@
 #define PCH_H
 
 #include <iostream>
-#include <string.h>
+#include <istream>
+#include <string>
+
+#include <sql.h>
 
 using namespace std;
 

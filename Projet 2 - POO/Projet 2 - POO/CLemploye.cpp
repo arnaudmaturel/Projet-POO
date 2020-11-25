@@ -7,7 +7,7 @@ void CLemploye::consulter()
 
 void CLemploye::ajouter(string oui)
 {
-	cout << "Voulez-vous ajouter un employe ?" << endl;
+	cout << "\nVoulez-vous ajouter un employe ?" << endl;
 	cin >> oui;
 
 	if (oui == "oui" || oui == "Oui" || oui == "OUI")
@@ -19,8 +19,9 @@ void CLemploye::ajouter(string oui)
 		cin >> this->prenom;
 
 		cout << "\nEntrez l'adresse du nouvel employe : " << endl;
-		cin >> this->adresse;
-
+		cin.ignore();
+		getline(cin, this->adresse);
+		
 		cout << "\nEntrez la ville du nouvel employe : " << endl;
 		cin >> this->ville;
 
