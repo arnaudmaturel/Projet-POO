@@ -218,20 +218,23 @@ namespace FormsPOO {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		FormsPOO::MyFormPersonnel^ objPers = gcnew MyFormPersonnel();
-		objPers->ShowDialog();
+		FormsPOO::MyFormPersonnel^ objPers1 = gcnew MyFormPersonnel();
+		objPers1->ShowDialog();
+		this->Show();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		FormsPOO::MyFormClient^ objCli = gcnew MyFormClient();
-		objCli->ShowDialog();
+		FormsPOO::MyFormClient^ objCli1 = gcnew MyFormClient();
+		objCli1->ShowDialog();
+		this->Show();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		FormsPOO::MyFormArticle^ objArt = gcnew MyFormArticle();
-		objArt->ShowDialog();
+		FormsPOO::MyFormArticle^ objArt1 = gcnew MyFormArticle();
+		objArt1->ShowDialog();
+		this->Show();
 	}
 };
 }

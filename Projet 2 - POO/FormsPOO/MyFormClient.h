@@ -1,5 +1,9 @@
 #pragma once
 
+#include "MyFormMain.h"
+#include "MyFormPersonnel.h"
+#include "MyFormArticle.h"
+
 namespace FormsPOO {
 
 	using namespace System;
@@ -273,6 +277,7 @@ namespace FormsPOO {
 			this->acceuilToolStripMenuItem->Name = L"acceuilToolStripMenuItem";
 			this->acceuilToolStripMenuItem->Size = System::Drawing::Size(58, 20);
 			this->acceuilToolStripMenuItem->Text = L"Acceuil";
+			this->acceuilToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyFormClient::acceuilToolStripMenuItem_Click);
 			// 
 			// menuToolStripMenuItem
 			// 
@@ -288,7 +293,7 @@ namespace FormsPOO {
 			// 
 			this->gestionDesClientsToolStripMenuItem->Name = L"gestionDesClientsToolStripMenuItem";
 			this->gestionDesClientsToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesClientsToolStripMenuItem->Text = L"Gestion des clients";
+			this->gestionDesClientsToolStripMenuItem->Text = L"Gestion du personnel";
 			// 
 			// gestionDesArticlesToolStripMenuItem
 			// 
@@ -431,5 +436,11 @@ namespace FormsPOO {
 
 		}
 #pragma endregion
-	};
+	private: System::Void acceuilToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		/*this->Hide();
+		FormsPOO::MyFormMain^ objMain2 = gcnew MyFormMain();
+		objMain2->ShowDialog();*/
+	}
+};
 }
