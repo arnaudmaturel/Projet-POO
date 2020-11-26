@@ -33,24 +33,4 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\Livrable 2\Interface Graphique.png">
-      <Filter>Fichiers d%27en-tête\Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="..\..\..\Livrable 2\Statistique.png">
-      <Filter>Fichiers d%27en-tête\Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="..\..\..\Livrable 2\Stock.png">
-      <Filter>Fichiers d%27en-tête\Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="..\..\..\Livrable 2\Article.png">
-      <Filter>Fichiers d%27en-tête\Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="..\..\..\Livrable 2\Client.png">
-      <Filter>Fichiers d%27en-tête\Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="..\..\..\Livrable 2\Employé.png">
-      <Filter>Fichiers d%27en-tête\Fichiers de ressources</Filter>
-    </Image>
-  </ItemGroup>
 </Project>

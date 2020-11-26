@@ -143,14 +143,6 @@
       <DependentUpon>FormPersonnels.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\Livrable 2\Article.png" />
-    <Image Include="..\..\..\Livrable 2\Client.png" />
-    <Image Include="..\..\..\Livrable 2\Employé.png" />
-    <Image Include="..\..\..\Livrable 2\Interface Graphique.png" />
-    <Image Include="..\..\..\Livrable 2\Statistique.png" />
-    <Image Include="..\..\..\Livrable 2\Stock.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
