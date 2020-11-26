@@ -1,6 +1,8 @@
 #pragma once
 
 #include "MyFormPersonnel.h"
+#include "MyFormClient.h"
+#include "MyFormArticle.h"
 
 namespace FormsPOO {
 
@@ -88,22 +90,27 @@ namespace FormsPOO {
 			// 
 			// button2
 			// 
+			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
 			this->button2->Location = System::Drawing::Point(156, 143);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(138, 300);
 			this->button2->TabIndex = 1;
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyFormMain::button2_Click);
 			// 
 			// button3
 			// 
+			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(300, 143);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(138, 300);
 			this->button3->TabIndex = 2;
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyFormMain::button3_Click);
 			// 
 			// button4
 			// 
+			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->Location = System::Drawing::Point(444, 143);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(138, 300);
@@ -112,6 +119,7 @@ namespace FormsPOO {
 			// 
 			// button5
 			// 
+			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
 			this->button5->Location = System::Drawing::Point(588, 143);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(138, 300);
@@ -212,6 +220,18 @@ namespace FormsPOO {
 		this->Hide();
 		FormsPOO::MyFormPersonnel^ objPers = gcnew MyFormPersonnel();
 		objPers->ShowDialog();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		FormsPOO::MyFormClient^ objCli = gcnew MyFormClient();
+		objCli->ShowDialog();
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		FormsPOO::MyFormArticle^ objArt = gcnew MyFormArticle();
+		objArt->ShowDialog();
 	}
 };
 }

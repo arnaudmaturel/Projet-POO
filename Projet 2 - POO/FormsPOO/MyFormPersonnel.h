@@ -55,13 +55,22 @@ namespace FormsPOO {
 	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesArticlesToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ gestionDuStockToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesStatistiquesToolStripMenuItem;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::ComponentModel::IContainer^ components;
+
 	protected:
 
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -92,6 +101,13 @@ namespace FormsPOO {
 			this->gestionDesArticlesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gestionDuStockToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gestionDesStatistiquesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->menuStrip1->SuspendLayout();
@@ -102,7 +118,7 @@ namespace FormsPOO {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(195, 139);
+			this->label1->Location = System::Drawing::Point(167, 120);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(63, 33);
 			this->label1->TabIndex = 0;
@@ -113,7 +129,7 @@ namespace FormsPOO {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(155, 172);
+			this->label2->Location = System::Drawing::Point(127, 160);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(103, 33);
 			this->label2->TabIndex = 1;
@@ -124,7 +140,7 @@ namespace FormsPOO {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(112, 205);
+			this->label3->Location = System::Drawing::Point(84, 199);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(146, 33);
 			this->label3->TabIndex = 2;
@@ -135,7 +151,7 @@ namespace FormsPOO {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(53, 238);
+			this->label4->Location = System::Drawing::Point(25, 238);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(205, 33);
 			this->label4->TabIndex = 3;
@@ -146,7 +162,7 @@ namespace FormsPOO {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(164, 271);
+			this->label5->Location = System::Drawing::Point(136, 277);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(94, 33);
 			this->label5->TabIndex = 4;
@@ -157,7 +173,7 @@ namespace FormsPOO {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(108, 304);
+			this->label6->Location = System::Drawing::Point(80, 315);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(150, 33);
 			this->label6->TabIndex = 5;
@@ -168,7 +184,7 @@ namespace FormsPOO {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(51, 337);
+			this->label7->Location = System::Drawing::Point(23, 354);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(207, 33);
 			this->label7->TabIndex = 6;
@@ -178,7 +194,7 @@ namespace FormsPOO {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(12, 400);
+			this->button1->Location = System::Drawing::Point(12, 443);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(143, 36);
 			this->button1->TabIndex = 7;
@@ -189,7 +205,7 @@ namespace FormsPOO {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(161, 400);
+			this->button2->Location = System::Drawing::Point(161, 443);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(143, 36);
 			this->button2->TabIndex = 8;
@@ -200,7 +216,7 @@ namespace FormsPOO {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(310, 400);
+			this->button3->Location = System::Drawing::Point(310, 443);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(143, 36);
 			this->button3->TabIndex = 9;
@@ -211,7 +227,7 @@ namespace FormsPOO {
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(277, 89);
+			this->button4->Location = System::Drawing::Point(619, 57);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(176, 36);
 			this->button4->TabIndex = 10;
@@ -222,7 +238,7 @@ namespace FormsPOO {
 			// 
 			this->button5->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(459, 89);
+			this->button5->Location = System::Drawing::Point(801, 57);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(176, 36);
 			this->button5->TabIndex = 11;
@@ -232,9 +248,9 @@ namespace FormsPOO {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(277, 152);
+			this->dataGridView1->Location = System::Drawing::Point(619, 120);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(357, 217);
+			this->dataGridView1->Size = System::Drawing::Size(357, 359);
 			this->dataGridView1->TabIndex = 12;
 			// 
 			// menuStrip1
@@ -245,7 +261,7 @@ namespace FormsPOO {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(649, 24);
+			this->menuStrip1->Size = System::Drawing::Size(999, 24);
 			this->menuStrip1->TabIndex = 13;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -289,11 +305,81 @@ namespace FormsPOO {
 			this->gestionDesStatistiquesToolStripMenuItem->Size = System::Drawing::Size(197, 22);
 			this->gestionDesStatistiquesToolStripMenuItem->Text = L"Gestion des statistiques";
 			// 
-			// uiPers
+			// textBox1
+			// 
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox1->Location = System::Drawing::Point(236, 120);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(346, 33);
+			this->textBox1->TabIndex = 14;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox2->Location = System::Drawing::Point(236, 160);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(346, 33);
+			this->textBox2->TabIndex = 15;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox3->Location = System::Drawing::Point(236, 199);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(346, 33);
+			this->textBox3->TabIndex = 16;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox4->Location = System::Drawing::Point(236, 238);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(346, 33);
+			this->textBox4->TabIndex = 17;
+			// 
+			// textBox5
+			// 
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox5->Location = System::Drawing::Point(236, 277);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(346, 33);
+			this->textBox5->TabIndex = 18;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox6->Location = System::Drawing::Point(236, 315);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(346, 33);
+			this->textBox6->TabIndex = 19;
+			// 
+			// textBox7
+			// 
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox7->Location = System::Drawing::Point(236, 354);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(346, 33);
+			this->textBox7->TabIndex = 20;
+			// 
+			// MyFormPersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(649, 448);
+			this->ClientSize = System::Drawing::Size(999, 491);
+			this->Controls->Add(this->textBox7);
+			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->textBox4);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
@@ -309,7 +395,7 @@ namespace FormsPOO {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Name = L"uiPers";
+			this->Name = L"MyFormPersonnel";
 			this->Text = L"Gestion du personnel";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -317,6 +403,7 @@ namespace FormsPOO {
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
