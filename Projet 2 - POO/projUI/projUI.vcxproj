@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{8596986E-5F9F-4AA0-AF02-FB6459958867}</ProjectGuid>
+    <ProjectGuid>{5B5BBDCA-6044-498B-8EFA-34037260ACF1}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>uimg</RootNamespace>
+    <RootNamespace>projUI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,15 +115,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="FormMainPage.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="FormPersonnels.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -131,13 +122,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormMainPage.resx">
-      <DependentUpon>FormMainPage.h</DependentUpon>
-    </EmbeddedResource>
+    <ClCompile Include="pMain.cpp" />
+    <ClCompile Include="pPers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FormPersonnels.cpp" />
-    <ClCompile Include="FromMainPage.cpp" />
+    <ClInclude Include="pMain.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="pPers.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
