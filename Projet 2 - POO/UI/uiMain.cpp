@@ -1,4 +1,5 @@
-#include "uiMain.h"
+#include "MyFormMain.h"
+#include "MyFormPersonnel.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -11,7 +12,7 @@ void Main(array<String^>^ args)
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	// Nom du projet
-	UI::uiMain form;
+	gp5_appli::MyFormMain formMain;
 
-	Application::Run(% form);
+	Application::Run(% formMain);
 }

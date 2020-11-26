@@ -25,7 +25,6 @@
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>UI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>gp5_appli</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,19 +126,19 @@
     <ClCompile Include="uiMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyFormPersonnel.h">
+    <ClInclude Include="uiPers.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyFormMain.h">
+    <ClInclude Include="uiMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyFormMain.resx">
-      <DependentUpon>MyFormMain.h</DependentUpon>
+    <EmbeddedResource Include="uiMain.resx">
+      <DependentUpon>uiMain.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormPersonnel.resx">
-      <DependentUpon>MyFormPersonnel.h</DependentUpon>
+    <EmbeddedResource Include="uiPers.resx">
+      <DependentUpon>uiPers.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

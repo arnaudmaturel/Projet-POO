@@ -1,6 +1,6 @@
 #pragma once
 
-namespace UI {
+namespace FormsPOO {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -12,10 +12,10 @@ namespace UI {
 	/// <summary>
 	/// Description résumée de MyForm
 	/// </summary>
-	public ref class uiPers : public System::Windows::Forms::Form
+	public ref class MyFormClient : public System::Windows::Forms::Form
 	{
 	public:
-		uiPers(void)
+		MyFormClient(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace UI {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~uiPers()
+		~MyFormClient()
 		{
 			if (components)
 			{
@@ -49,7 +49,7 @@ namespace UI {
 		void InitializeComponent(void)
 		{
 			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(739, 455);
+			this->Size = System::Drawing::Size(300,300);
 			this->Text = L"MyForm";
 			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;

@@ -1,6 +1,8 @@
 #pragma once
 
-namespace UI {
+#include "MyFormPersonnel.h"
+
+namespace gp5_appli {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -12,10 +14,10 @@ namespace UI {
 	/// <summary>
 	/// Description résumée de MyForm
 	/// </summary>
-	public ref class uiMain : public System::Windows::Forms::Form
+	public ref class MyFormMain : public System::Windows::Forms::Form
 	{
 	public:
-		uiMain(void)
+		MyFormMain(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +29,7 @@ namespace UI {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~uiMain()
+		~MyFormMain()
 		{
 			if (components)
 			{
@@ -51,7 +53,7 @@ namespace UI {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -60,7 +62,7 @@ namespace UI {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(uiMain::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyFormMain::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -82,6 +84,7 @@ namespace UI {
 			this->button1->Size = System::Drawing::Size(138, 300);
 			this->button1->TabIndex = 0;
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyFormMain::button1_Click);
 			// 
 			// button2
 			// 
@@ -91,6 +94,7 @@ namespace UI {
 			this->button2->Size = System::Drawing::Size(138, 300);
 			this->button2->TabIndex = 1;
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyFormMain::button2_Click);
 			// 
 			// button3
 			// 
@@ -208,5 +212,16 @@ namespace UI {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		gp5_appli::MyFormPersonnel^ objPers = gcnew gp5_appli::MyFormPersonnel();
+		objPers->ShowDialog();
+	}
+
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		
+	}
+};
 }
