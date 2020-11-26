@@ -1,6 +1,6 @@
 #pragma once
 
-namespace projUI {
+namespace UI {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -10,12 +10,12 @@ namespace projUI {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm1
+	/// Description résumée de MyForm
 	/// </summary>
-	public ref class MyForm1 : public System::Windows::Forms::Form
+	public ref class uiPers : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm1(void)
+		uiPers(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace projUI {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~MyForm1()
+		~uiPers()
 		{
 			if (components)
 			{
@@ -49,8 +49,8 @@ namespace projUI {
 		void InitializeComponent(void)
 		{
 			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm1";
+			this->Size = System::Drawing::Size(739, 455);
+			this->Text = L"MyForm";
 			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 		}

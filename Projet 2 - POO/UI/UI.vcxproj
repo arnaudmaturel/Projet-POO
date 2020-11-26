@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{5B5BBDCA-6044-498B-8EFA-34037260ACF1}</ProjectGuid>
+    <ProjectGuid>{DE4D7F3E-2C5E-4812-8B16-D6697F85CE6A}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>projUI</RootNamespace>
+    <RootNamespace>UI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -122,16 +122,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pMain.cpp" />
-    <ClCompile Include="pPers.cpp" />
+    <ClCompile Include="uiPers.cpp" />
+    <ClCompile Include="uiMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pMain.h">
+    <ClInclude Include="uiPers.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="pPers.h">
+    <ClInclude Include="uiMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="uiMain.resx">
+      <DependentUpon>uiMain.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
