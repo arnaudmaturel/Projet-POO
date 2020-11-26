@@ -76,7 +76,7 @@ namespace POOUI {
 			// 
 			// button1
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->Location = System::Drawing::Point(31, 157);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(138, 300);
@@ -86,7 +86,7 @@ namespace POOUI {
 			// 
 			// button2
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
+			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
 			this->button2->Location = System::Drawing::Point(196, 157);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(138, 300);
@@ -95,7 +95,6 @@ namespace POOUI {
 			// 
 			// button3
 			// 
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(364, 157);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(138, 300);
