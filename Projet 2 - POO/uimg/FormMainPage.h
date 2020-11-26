@@ -1,7 +1,5 @@
 #pragma once
 
-//#include "stdafx.h"
-
 namespace POOUI {
 
 	using namespace System;
@@ -37,6 +35,7 @@ namespace POOUI {
 			}
 		}
 	private: System::Windows::Forms::Button^ button1;
+	protected:
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
@@ -77,16 +76,17 @@ namespace POOUI {
 			// 
 			// button1
 			// 
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->Location = System::Drawing::Point(31, 157);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(138, 300);
 			this->button1->TabIndex = 0;
 			this->button1->UseVisualStyleBackColor = true;
-			//this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// button2
 			// 
+			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->Location = System::Drawing::Point(196, 157);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(138, 300);
@@ -95,6 +95,7 @@ namespace POOUI {
 			// 
 			// button3
 			// 
+			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(364, 157);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(138, 300);
@@ -208,11 +209,11 @@ namespace POOUI {
 
 		}
 #pragma endregion
-	/*private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		POOUI::MyFormPersonnel GestionPersonnel;
 		GestionPersonnel.ShowDialog();
 		this->Show();
-	}*/
-};
+	}
+	};
 }
