@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\POOUI\FromMainPage.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\POOUI\FormPersonnels.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="FormMainPage.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -34,14 +26,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Employe.png">
-      <Filter>Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="Image1.png">
-      <Filter>Fichiers de ressources</Filter>
-    </Image>
-    <Image Include="Image1.bmp">
-      <Filter>Fichiers de ressources</Filter>
-    </Image>
+    <ClCompile Include="FormPersonnels.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FromMainPage.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

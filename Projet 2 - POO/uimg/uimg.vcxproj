@@ -115,10 +115,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\POOUI\FormPersonnels.cpp" />
-    <ClCompile Include="..\POOUI\FromMainPage.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="FormMainPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -140,9 +136,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Employe.png" />
-    <Image Include="Image1.bmp" />
-    <Image Include="Image1.png" />
+    <ClCompile Include="FormPersonnels.cpp" />
+    <ClCompile Include="FromMainPage.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
