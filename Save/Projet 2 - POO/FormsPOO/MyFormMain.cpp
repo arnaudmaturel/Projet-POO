@@ -1,5 +1,4 @@
 #include "MyFormMain.h"
-#include "MyFormPersonnel.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -12,7 +11,7 @@ void Main(array<String^>^ args)
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	// Nom du projet
-	gp5_appli::MyFormMain formMain;
+	FormsPOO::MyFormMain formMain;
 
 	Application::Run(% formMain);
 }

@@ -20,12 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{DE4D7F3E-2C5E-4812-8B16-D6697F85CE6A}</ProjectGuid>
+    <ProjectGuid>{738EE021-109F-4253-B1BE-4C86BACA3E70}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>UI</RootNamespace>
+    <RootNamespace>FormsPOO</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>gp5_appli</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -79,6 +78,8 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -108,6 +109,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -116,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -123,18 +126,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="uiPers.cpp" />
-    <ClCompile Include="uiMain.cpp" />
+    <ClCompile Include="MyFormStock.cpp" />
+    <ClCompile Include="MyFormArticle.cpp" />
+    <ClCompile Include="MyFormClient.cpp" />
+    <ClCompile Include="MyFormMain.cpp" />
+    <ClCompile Include="MyFormPersonnel.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyFormPersonnel.h">
+    <ClInclude Include="MyFormStock.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyFormPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyFormArticle.resx">
+      <DependentUpon>MyFormArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormClient.resx">
+      <DependentUpon>MyFormClient.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormMain.resx">
       <DependentUpon>MyFormMain.h</DependentUpon>
     </EmbeddedResource>

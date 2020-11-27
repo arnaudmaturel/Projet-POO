@@ -1,8 +1,11 @@
 #pragma once
 
 #include "MyFormPersonnel.h"
+#include "MyFormClient.h"
+#include "MyFormArticle.h"
+#include "MyFormStock.h"
 
-namespace gp5_appli {
+namespace FormsPOO {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -53,7 +56,7 @@ namespace gp5_appli {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -104,6 +107,7 @@ namespace gp5_appli {
 			this->button3->Size = System::Drawing::Size(138, 300);
 			this->button3->TabIndex = 2;
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyFormMain::button3_Click);
 			// 
 			// button4
 			// 
@@ -113,6 +117,7 @@ namespace gp5_appli {
 			this->button4->Size = System::Drawing::Size(138, 300);
 			this->button4->TabIndex = 3;
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyFormMain::button4_Click);
 			// 
 			// button5
 			// 
@@ -189,7 +194,7 @@ namespace gp5_appli {
 			this->label6->TabIndex = 10;
 			this->label6->Text = L"Gestion";
 			// 
-			// uiMain
+			// MyFormMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -205,8 +210,8 @@ namespace gp5_appli {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Name = L"uiMain";
-			this->Text = L"MyForm";
+			this->Name = L"MyFormMain";
+			this->Text = L"Acceuil";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -215,13 +220,30 @@ namespace gp5_appli {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		gp5_appli::MyFormPersonnel^ objPers = gcnew gp5_appli::MyFormPersonnel();
-		objPers->ShowDialog();
+		FormsPOOpersonnel::MyFormPersonnel^ objPers1 = gcnew FormsPOOpersonnel::MyFormPersonnel();
+		objPers1->ShowDialog();
+		this->Show();
 	}
-
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		
+		this->Hide();
+		FormsPOOclient::MyFormClient^ objCli1 = gcnew FormsPOOclient::MyFormClient();
+		objCli1->ShowDialog();
+		this->Show();
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		FormsPOOarticle::MyFormArticle^ objArt1 = gcnew FormsPOOarticle::MyFormArticle();
+		objArt1->ShowDialog();
+		this->Show();
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		FormsPOOstock::MyFormStock^ objSto1 = gcnew FormsPOOstock::MyFormStock();
+		objSto1->ShowDialog();
+		this->Show();
 	}
 };
 }

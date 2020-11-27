@@ -1,17 +1,17 @@
-#include "MyFormPersonnel.h"
+#include "MyFormStock.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 
 [STAThread]
-void MainPers(array<String^>^ args)
+void MainSto(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	// Nom du projet
-	FormsPOOpersonnel::MyFormPersonnel formPers;
+	FormsPOOstock::MyFormStock formStock;
 
-	Application::Run(% formPers);
+	Application::Run(% formStock);
 }

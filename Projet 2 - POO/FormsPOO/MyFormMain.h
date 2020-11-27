@@ -3,6 +3,7 @@
 #include "MyFormPersonnel.h"
 #include "MyFormClient.h"
 #include "MyFormArticle.h"
+#include "MyFormStock.h"
 
 namespace FormsPOO {
 
@@ -116,6 +117,7 @@ namespace FormsPOO {
 			this->button4->Size = System::Drawing::Size(138, 300);
 			this->button4->TabIndex = 3;
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyFormMain::button4_Click);
 			// 
 			// button5
 			// 
@@ -218,22 +220,29 @@ namespace FormsPOO {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		FormsPOO::MyFormPersonnel^ objPers1 = gcnew MyFormPersonnel();
+		FormsPOOpersonnel::MyFormPersonnel^ objPers1 = gcnew FormsPOOpersonnel::MyFormPersonnel();
 		objPers1->ShowDialog();
 		this->Show();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		FormsPOO::MyFormClient^ objCli1 = gcnew MyFormClient();
+		FormsPOOclient::MyFormClient^ objCli1 = gcnew FormsPOOclient::MyFormClient();
 		objCli1->ShowDialog();
 		this->Show();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		this->Hide();
-		FormsPOO::MyFormArticle^ objArt1 = gcnew MyFormArticle();
+		FormsPOOarticle::MyFormArticle^ objArt1 = gcnew FormsPOOarticle::MyFormArticle();
 		objArt1->ShowDialog();
+		this->Show();
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		FormsPOOstock::MyFormStock^ objSto1 = gcnew FormsPOOstock::MyFormStock();
+		objSto1->ShowDialog();
 		this->Show();
 	}
 };
