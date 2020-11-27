@@ -4,6 +4,7 @@
 #include "MyFormClient.h"
 #include "MyFormArticle.h"
 #include "MyFormStock.h"
+#include "MyFormStats.h"
 
 namespace FormsPOO {
 
@@ -127,6 +128,7 @@ namespace FormsPOO {
 			this->button5->Size = System::Drawing::Size(138, 300);
 			this->button5->TabIndex = 4;
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyFormMain::button5_Click);
 			// 
 			// label1
 			// 
@@ -243,6 +245,13 @@ namespace FormsPOO {
 		this->Hide();
 		FormsPOOstock::MyFormStock^ objSto1 = gcnew FormsPOOstock::MyFormStock();
 		objSto1->ShowDialog();
+		this->Show();
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide();
+		FormsPOOstats::MyFormStats^ objStat1 = gcnew FormsPOOstats::MyFormStats();
+		objStat1->ShowDialog();
 		this->Show();
 	}
 };
