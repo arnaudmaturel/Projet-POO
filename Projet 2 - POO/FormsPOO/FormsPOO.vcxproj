@@ -126,14 +126,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyFormCAMois.cpp" />
+    <ClCompile Include="MyformMontant.cpp" />
+    <ClCompile Include="MyFormPanier_moy.cpp" />
+    <ClCompile Include="MyFormProdRupt.cpp" />
+    <ClCompile Include="MyFormSimValCom.cpp" />
     <ClCompile Include="MyFormStats.cpp" />
     <ClCompile Include="MyFormStock.cpp" />
     <ClCompile Include="MyFormArticle.cpp" />
     <ClCompile Include="MyFormClient.cpp" />
     <ClCompile Include="MyFormMain.cpp" />
     <ClCompile Include="MyFormPersonnel.cpp" />
+    <ClCompile Include="MyFormTopMV.cpp" />
+    <ClCompile Include="MyFormTopPV.cpp" />
+    <ClCompile Include="MyFormValAchS.cpp" />
+    <ClCompile Include="MyFormValComS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyFormCAMois.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyformMontant.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormPanier_moy.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormProdRupt.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormSimValCom.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyFormStats.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -150,6 +174,18 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormTopMV.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormTopPV.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormValAchS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormValComS.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
