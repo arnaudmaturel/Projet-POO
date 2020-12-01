@@ -128,7 +128,6 @@ namespace FormsPOOstats {
 			label2->Size = System::Drawing::Size(280, 32);
 			label2->TabIndex = 1;
 			label2->Text = L"Montant des achats";
-			label2->Click += gcnew System::EventHandler(this, &MyFormStats::label2_Click);
 			// 
 			// label3
 			// 
@@ -195,7 +194,6 @@ namespace FormsPOOstats {
 			label8->Size = System::Drawing::Size(464, 32);
 			label8->TabIndex = 7;
 			label8->Text = L"Produit à commander en urgence";
-			label8->Click += gcnew System::EventHandler(this, &MyFormStats::label8_Click);
 			// 
 			// label9
 			// 
@@ -207,7 +205,6 @@ namespace FormsPOOstats {
 			label9->Size = System::Drawing::Size(339, 32);
 			label9->TabIndex = 8;
 			label9->Text = L"Top 10 des pires ventes";
-			label9->Click += gcnew System::EventHandler(this, &MyFormStats::label9_Click);
 			// 
 			// label10
 			// 
@@ -219,7 +216,6 @@ namespace FormsPOOstats {
 			label10->Size = System::Drawing::Size(405, 32);
 			label10->TabIndex = 9;
 			label10->Text = L"Valeur commerciale du stock";
-			label10->Click += gcnew System::EventHandler(this, &MyFormStats::label10_Click);
 			// 
 			// label11
 			// 
