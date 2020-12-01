@@ -34,6 +34,9 @@ namespace FormsPOO {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +51,45 @@ namespace FormsPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyFormProdRupt";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->SuspendLayout();
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(326, 15);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(491, 32);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Produit à recommander en urgence";
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(77, 98);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->RowTemplate->Height = 24;
+			this->dataGridView1->Size = System::Drawing::Size(895, 435);
+			this->dataGridView1->TabIndex = 1;
+			// 
+			// MyFormProdRupt
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(1052, 573);
+			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->label1);
+			this->Name = L"MyFormProdRupt";
+			this->Text = L"MyFormProdRupt";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};

@@ -34,6 +34,9 @@ namespace FormsPOO {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ label1;
+	protected:
+	private: System::Windows::Forms::TextBox^ textBox1;
 
 	private:
 		/// <summary>
@@ -48,11 +51,41 @@ namespace FormsPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyFormValAchS";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->SuspendLayout();
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(274, 33);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(331, 32);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Valeur d\'achat du stock";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(256, 240);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(391, 22);
+			this->textBox1->TabIndex = 1;
+			this->textBox1->Text = L"*display*";
+			// 
+			// MyFormValAchS
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(903, 554);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->label1);
+			this->Name = L"MyFormValAchS";
+			this->Text = L"MyFormValAchS";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
 	};
