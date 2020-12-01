@@ -126,6 +126,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyFormAdresse.cpp" />
     <ClCompile Include="MyFormCAMois.cpp" />
     <ClCompile Include="MyformMontant.cpp" />
     <ClCompile Include="MyFormPanier_moy.cpp" />
@@ -143,6 +144,9 @@
     <ClCompile Include="MyFormValComS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyFormAdresse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyFormCAMois.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -191,6 +195,9 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyFormAdresse.resx">
+      <DependentUpon>MyFormAdresse.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormArticle.resx">
       <DependentUpon>MyFormArticle.h</DependentUpon>
     </EmbeddedResource>
