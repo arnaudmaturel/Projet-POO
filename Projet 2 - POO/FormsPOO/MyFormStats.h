@@ -247,6 +247,7 @@ namespace FormsPOOstats {
 			this->button1->Size = System::Drawing::Size(131, 131);
 			this->button1->TabIndex = 12;
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyFormStats::button1_Click);
 			// 
 			// button2
 			// 
@@ -324,7 +325,7 @@ namespace FormsPOOstats {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1188, 602);
+			this->ClientSize = System::Drawing::Size(1205, 611);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);

@@ -126,14 +126,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyFormCAMois.cpp" />
+    <ClCompile Include="MyformMontant.cpp" />
+    <ClCompile Include="MyFormPanier_moy.cpp" />
+    <ClCompile Include="MyFormProdRupt.cpp" />
+    <ClCompile Include="MyFormSimValCom.cpp" />
     <ClCompile Include="MyFormStats.cpp" />
     <ClCompile Include="MyFormStock.cpp" />
     <ClCompile Include="MyFormArticle.cpp" />
     <ClCompile Include="MyFormClient.cpp" />
     <ClCompile Include="MyFormMain.cpp" />
     <ClCompile Include="MyFormPersonnel.cpp" />
+    <ClCompile Include="MyFormTopMV.cpp" />
+    <ClCompile Include="MyFormTopPV.cpp" />
+    <ClCompile Include="MyFormValAchS.cpp" />
+    <ClCompile Include="MyFormValComS.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyFormCAMois.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyformMontant.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormPanier_moy.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormProdRupt.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormSimValCom.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyFormStats.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -152,11 +176,26 @@
     <ClInclude Include="MyFormPersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyFormTopMV.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormTopPV.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormValAchS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormValComS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyFormArticle.resx">
       <DependentUpon>MyFormArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormCAMois.resx">
+      <DependentUpon>MyFormCAMois.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormClient.resx">
       <DependentUpon>MyFormClient.h</DependentUpon>
@@ -164,11 +203,35 @@
     <EmbeddedResource Include="MyFormMain.resx">
       <DependentUpon>MyFormMain.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyformMontant.resx">
+      <DependentUpon>MyformMontant.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormPanier_moy.resx">
+      <DependentUpon>MyFormPanier_moy.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormPersonnel.resx">
       <DependentUpon>MyFormPersonnel.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyFormProdRupt.resx">
+      <DependentUpon>MyFormProdRupt.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormSimValCom.resx">
+      <DependentUpon>MyFormSimValCom.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormStats.resx">
       <DependentUpon>MyFormStats.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormTopMV.resx">
+      <DependentUpon>MyFormTopMV.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormTopPV.resx">
+      <DependentUpon>MyFormTopPV.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormValAchS.resx">
+      <DependentUpon>MyFormValAchS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormValComS.resx">
+      <DependentUpon>MyFormValComS.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
