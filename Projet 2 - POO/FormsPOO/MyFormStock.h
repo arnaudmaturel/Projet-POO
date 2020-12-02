@@ -1,5 +1,7 @@
 #pragma once
 
+#include "MyFormArticle.h"
+
 namespace FormsPOOstock {
 
 	using namespace System;
@@ -8,6 +10,7 @@ namespace FormsPOOstock {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace MySql::Data::MySqlClient;
 
 	/// <summary>
 	/// Description résumée de MyForm
@@ -41,7 +44,7 @@ namespace FormsPOOstock {
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
@@ -66,14 +69,16 @@ namespace FormsPOOstock {
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox8;
 	private: System::Windows::Forms::TextBox^ textBox9;
-	//private: System::ComponentModel::IContainer^ components;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::ComponentModel::IContainer^ components;
+		   //private: System::ComponentModel::IContainer^ components;
 	protected:
 
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -90,7 +95,6 @@ namespace FormsPOOstock {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -115,6 +119,7 @@ namespace FormsPOOstock {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->menuStrip1->SuspendLayout();
@@ -136,7 +141,7 @@ namespace FormsPOOstock {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(215, 140);
+			this->label2->Location = System::Drawing::Point(215, 179);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(206, 33);
 			this->label2->TabIndex = 1;
@@ -147,7 +152,7 @@ namespace FormsPOOstock {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(103, 179);
+			this->label3->Location = System::Drawing::Point(103, 218);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(318, 33);
 			this->label3->TabIndex = 2;
@@ -158,7 +163,7 @@ namespace FormsPOOstock {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(287, 218);
+			this->label4->Location = System::Drawing::Point(287, 257);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(134, 33);
 			this->label4->TabIndex = 3;
@@ -169,7 +174,7 @@ namespace FormsPOOstock {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(213, 296);
+			this->label5->Location = System::Drawing::Point(213, 335);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(208, 33);
 			this->label5->TabIndex = 4;
@@ -180,7 +185,7 @@ namespace FormsPOOstock {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(21, 335);
+			this->label6->Location = System::Drawing::Point(21, 374);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(400, 33);
 			this->label6->TabIndex = 5;
@@ -191,44 +196,35 @@ namespace FormsPOOstock {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(245, 374);
+			this->label7->Location = System::Drawing::Point(210, 140);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(176, 33);
+			this->label7->Size = System::Drawing::Size(211, 33);
 			this->label7->TabIndex = 6;
-			this->label7->Text = L"Catégorie :";
-			// 
-			// button1
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(12, 471);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(143, 36);
-			this->button1->TabIndex = 7;
-			this->button1->Text = L"Ajouter";
-			this->button1->UseVisualStyleBackColor = true;
+			this->label7->Text = L"ID catégorie :";
 			// 
 			// button2
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(161, 471);
+			this->button2->Location = System::Drawing::Point(427, 473);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(143, 36);
 			this->button2->TabIndex = 8;
 			this->button2->Text = L"Modifier";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyFormStock::button2_Click);
 			// 
 			// button3
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(310, 471);
+			this->button3->Location = System::Drawing::Point(603, 473);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(143, 36);
 			this->button3->TabIndex = 9;
 			this->button3->Text = L"Supprimer";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyFormStock::button3_Click);
 			// 
 			// button4
 			// 
@@ -240,6 +236,7 @@ namespace FormsPOOstock {
 			this->button4->TabIndex = 10;
 			this->button4->Text = L"Chercher";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyFormStock::button4_Click);
 			// 
 			// button5
 			// 
@@ -251,13 +248,14 @@ namespace FormsPOOstock {
 			this->button5->TabIndex = 11;
 			this->button5->Text = L"Afficher tout";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyFormStock::button5_Click);
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(790, 101);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(357, 406);
+			this->dataGridView1->Size = System::Drawing::Size(454, 406);
 			this->dataGridView1->TabIndex = 12;
 			// 
 			// menuStrip1
@@ -268,7 +266,7 @@ namespace FormsPOOstock {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1172, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1256, 24);
 			this->menuStrip1->TabIndex = 13;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -317,7 +315,7 @@ namespace FormsPOOstock {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(271, 257);
+			this->label8->Location = System::Drawing::Point(271, 296);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(150, 33);
 			this->label8->TabIndex = 14;
@@ -338,7 +336,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(427, 140);
+			this->textBox1->Location = System::Drawing::Point(427, 101);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(319, 33);
 			this->textBox1->TabIndex = 16;
@@ -347,7 +345,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->Location = System::Drawing::Point(427, 179);
+			this->textBox2->Location = System::Drawing::Point(427, 140);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(319, 33);
 			this->textBox2->TabIndex = 17;
@@ -356,7 +354,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox3->Location = System::Drawing::Point(427, 218);
+			this->textBox3->Location = System::Drawing::Point(427, 179);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(319, 33);
 			this->textBox3->TabIndex = 18;
@@ -365,7 +363,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox4->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox4->Location = System::Drawing::Point(427, 257);
+			this->textBox4->Location = System::Drawing::Point(427, 218);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(319, 33);
 			this->textBox4->TabIndex = 19;
@@ -374,7 +372,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox5->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox5->Location = System::Drawing::Point(427, 296);
+			this->textBox5->Location = System::Drawing::Point(427, 257);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(319, 33);
 			this->textBox5->TabIndex = 20;
@@ -383,7 +381,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox6->Location = System::Drawing::Point(427, 335);
+			this->textBox6->Location = System::Drawing::Point(427, 296);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(319, 33);
 			this->textBox6->TabIndex = 21;
@@ -392,7 +390,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox7->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox7->Location = System::Drawing::Point(427, 374);
+			this->textBox7->Location = System::Drawing::Point(427, 335);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(319, 33);
 			this->textBox7->TabIndex = 22;
@@ -401,7 +399,7 @@ namespace FormsPOOstock {
 			// 
 			this->textBox8->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox8->Location = System::Drawing::Point(427, 413);
+			this->textBox8->Location = System::Drawing::Point(427, 374);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(319, 33);
 			this->textBox8->TabIndex = 23;
@@ -410,16 +408,29 @@ namespace FormsPOOstock {
 			// 
 			this->textBox9->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox9->Location = System::Drawing::Point(427, 101);
+			this->textBox9->Location = System::Drawing::Point(427, 413);
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(319, 33);
 			this->textBox9->TabIndex = 24;
 			// 
-			// MyFormArticle
+			// button6
+			// 
+			this->button6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->Location = System::Drawing::Point(427, 53);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(319, 36);
+			this->button6->TabIndex = 25;
+			this->button6->Text = L"Gérer les articles";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyFormStock::button6_Click);
+			// 
+			// MyFormStock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1172, 519);
+			this->ClientSize = System::Drawing::Size(1256, 521);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->textBox8);
 			this->Controls->Add(this->textBox7);
@@ -436,7 +447,6 @@ namespace FormsPOOstock {
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
@@ -454,7 +464,113 @@ namespace FormsPOOstock {
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
-	};
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		FormsPOOarticle::MyFormArticle^ objArt = gcnew FormsPOOarticle::MyFormArticle();
+		objArt->ShowDialog();
+	}
+		   // Update
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
+
+			int id_art = Int32::Parse(textBox1->Text);
+			int quantite = Int32::Parse(textBox4->Text);
+			double seuil_reap = Double::Parse(textBox8->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("update article set quantite_disponible=" + quantite + ",seuil_reapprovisionnement=" + seuil_reap + " where reference_article=" + id_art + "", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			MessageBox::Show("Les stocks de l'article ont été modifié");
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
+	}
+		   // Delete
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
+
+			int id_art = Int32::Parse(textBox1->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("delete from article WHERE reference_article=" + id_art + "", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			MessageBox::Show("L'article a été supprimé des stocks");
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
+	}
+		   // Go
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
+
+			int id_art = Int32::Parse(textBox1->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("select * from article WHERE reference_article=" + id_art + "", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			while (dr->Read())
+			{
+				textBox2->Text = dr->GetString(1);
+				textBox3->Text = dr->GetString(2);
+				textBox4->Text = dr->GetString(3);
+				textBox5->Text = dr->GetString(4);
+				textBox6->Text = dr->GetString(5);
+				textBox7->Text = dr->GetString(6);
+				textBox8->Text = dr->GetString(7);
+			}
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
+	}
+		   // Fetch
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from article", con);
+			DataTable^ dt = gcnew DataTable();
+
+			sda->Fill(dt);
+
+			bindingSource1->DataSource = dt;
+			dataGridView1->DataSource = bindingSource1;
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
+	}
+};
 }

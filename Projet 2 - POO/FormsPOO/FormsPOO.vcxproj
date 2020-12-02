@@ -128,7 +128,11 @@
   <ItemGroup>
     <ClCompile Include="MyFormAdresse.cpp" />
     <ClCompile Include="MyFormCAMois.cpp" />
+    <ClCompile Include="MyFormCategorie.cpp" />
+    <ClCompile Include="MyFormCommande.cpp" />
     <ClCompile Include="MyformMontant.cpp" />
+    <ClCompile Include="MyFormMoyenPaiement.cpp" />
+    <ClCompile Include="MyFormPaiement.cpp" />
     <ClCompile Include="MyFormPanier_moy.cpp" />
     <ClCompile Include="MyFormProdRupt.cpp" />
     <ClCompile Include="MyFormSimValCom.cpp" />
@@ -150,7 +154,19 @@
     <ClInclude Include="MyFormCAMois.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyFormCategorie.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyformMontant.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormMoyenPaiement.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormPaiement.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormPanier_moy.h">
@@ -204,14 +220,26 @@
     <EmbeddedResource Include="MyFormCAMois.resx">
       <DependentUpon>MyFormCAMois.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyFormCategorie.resx">
+      <DependentUpon>MyFormCategorie.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormClient.resx">
       <DependentUpon>MyFormClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormCommande.resx">
+      <DependentUpon>MyFormCommande.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormMain.resx">
       <DependentUpon>MyFormMain.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyformMontant.resx">
       <DependentUpon>MyformMontant.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormMoyenPaiement.resx">
+      <DependentUpon>MyFormMoyenPaiement.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormPaiement.resx">
+      <DependentUpon>MyFormPaiement.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormPanier_moy.resx">
       <DependentUpon>MyFormPanier_moy.h</DependentUpon>
@@ -227,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormStats.resx">
       <DependentUpon>MyFormStats.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormStock.resx">
+      <DependentUpon>MyFormStock.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormTopMV.resx">
       <DependentUpon>MyFormTopMV.h</DependentUpon>
