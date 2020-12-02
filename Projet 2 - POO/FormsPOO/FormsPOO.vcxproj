@@ -130,6 +130,7 @@
     <ClCompile Include="MyFormCAMois.cpp" />
     <ClCompile Include="MyFormCategorie.cpp" />
     <ClCompile Include="MyFormCommande.cpp" />
+    <ClCompile Include="MyFormLogin.cpp" />
     <ClCompile Include="MyformMontant.cpp" />
     <ClCompile Include="MyFormMoyenPaiement.cpp" />
     <ClCompile Include="MyFormPaiement.cpp" />
@@ -158,6 +159,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyformMontant.h">
@@ -228,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormCommande.resx">
       <DependentUpon>MyFormCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormLogin.resx">
+      <DependentUpon>MyFormLogin.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormMain.resx">
       <DependentUpon>MyFormMain.h</DependentUpon>
