@@ -65,7 +65,6 @@ namespace FormsPOO {
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(530, 358);
 			this->dataGridView1->TabIndex = 0;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyFormTopMV::dataGridView1_CellContentClick);
 			// 
 			// label1
 			// 

@@ -119,7 +119,6 @@ namespace FormsPOO {
 			this->textBox2->Size = System::Drawing::Size(316, 22);
 			this->textBox2->TabIndex = 5;
 			this->textBox2->Text = L"*display*";
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyFormCAMois::textBox2_TextChanged);
 			// 
 			// MyFormCAMois
 			// 
