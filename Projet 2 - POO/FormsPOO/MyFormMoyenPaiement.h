@@ -152,7 +152,7 @@ namespace FormsPOOpaiementM {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(12, 373);
+			this->button2->Location = System::Drawing::Point(12, 309);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(253, 58);
 			this->button2->TabIndex = 15;
@@ -164,7 +164,7 @@ namespace FormsPOOpaiementM {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(12, 309);
+			this->button3->Location = System::Drawing::Point(12, 373);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(253, 58);
 			this->button3->TabIndex = 16;
@@ -247,7 +247,7 @@ namespace FormsPOOpaiementM {
 		}
 	}
 		   // Update
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		try
 		{
@@ -257,7 +257,7 @@ namespace FormsPOOpaiementM {
 			int id_m_pay = Int32::Parse(textBox1->Text);
 			String^ m_pay = textBox2->Text;
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("update moyen_de_paiement set moyen_paiement'" + m_pay + "' where id_moyen_paiement=" + id_m_pay + "", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("update moyen_de_paiement set moyen_paiement='" + m_pay + "' where id_moyen_paiement=" + id_m_pay + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
@@ -271,7 +271,7 @@ namespace FormsPOOpaiementM {
 		}
 	}
 		   // Delete
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		try
 		{
@@ -303,7 +303,7 @@ namespace FormsPOOpaiementM {
 
 			int id_com = Int32::Parse(textBox1->Text);
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("select * from moyen_de_paiement where id_moyen_paiement=" + id_com + ")", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("select * from moyen_de_paiement where id_moyen_paiement=" + id_com + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();

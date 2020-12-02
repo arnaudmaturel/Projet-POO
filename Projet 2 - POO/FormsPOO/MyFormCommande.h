@@ -460,7 +460,7 @@ namespace FormsPOOcommande {
 			String^ prix_ttc = textBox9->Text;
 
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("update commande set numero_client=" + id_cli + ",reference_commande='" + ref_com + "',date_livraison_prevu='" + date_prevu + "',date_commande='" + date_com + "',remise_panier='" + remise + "',prix_total_ht='" + prix_ht + "',cout_total_tva='" + cout_tva + "',prix_total_ttc='" + prix_ttc + "' where id_commande=" + id_com + ")", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("update commande set numero_client=" + id_cli + ",reference_commande='" + ref_com + "',date_livraison_prevu='" + date_prevu + "',date_commande='" + date_com + "',remise_panier='" + remise + "',prix_total_ht='" + prix_ht + "',cout_total_tva='" + cout_tva + "',prix_total_ttc='" + prix_ttc + "' where id_commande=" + id_com + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
@@ -483,7 +483,7 @@ namespace FormsPOOcommande {
 
 			int id_com = Int32::Parse(textBox1->Text);
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("delete from commande where id_commande=" + id_com + ")", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("delete from commande where id_commande=" + id_com + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
@@ -506,7 +506,7 @@ namespace FormsPOOcommande {
 
 			int id_com = Int32::Parse(textBox1->Text);
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("select * from commande where id_commande=" + id_com + ")", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("select * from commande where id_commande=" + id_com + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
