@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyFormAdresse.cpp" />
+    <ClCompile Include="MyFormArticleCom.cpp" />
     <ClCompile Include="MyFormCAMois.cpp" />
     <ClCompile Include="MyFormCategorie.cpp" />
     <ClCompile Include="MyFormCommande.cpp" />
@@ -149,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFormAdresse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormArticleCom.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormCAMois.h">
@@ -216,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormArticle.resx">
       <DependentUpon>MyFormArticle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormArticleCom.resx">
+      <DependentUpon>MyFormArticleCom.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormCAMois.resx">
       <DependentUpon>MyFormCAMois.h</DependentUpon>

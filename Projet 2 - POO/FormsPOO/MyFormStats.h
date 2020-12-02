@@ -250,7 +250,7 @@ namespace FormsPOOstats {
 			// 
 			// button1
 			// 
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
+			//this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->Location = System::Drawing::Point(98, 64);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(131, 131);
@@ -260,7 +260,7 @@ namespace FormsPOOstats {
 			// 
 			// button2
 			// 
-			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
+			//this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
 			this->button2->Location = System::Drawing::Point(534, 64);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(131, 131);
@@ -270,7 +270,7 @@ namespace FormsPOOstats {
 			// 
 			// button3
 			// 
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
+			//this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(954, 64);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(131, 131);
@@ -280,7 +280,7 @@ namespace FormsPOOstats {
 			// 
 			// button4
 			// 
-			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
+			//this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->Location = System::Drawing::Point(98, 267);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(131, 131);
@@ -290,7 +290,7 @@ namespace FormsPOOstats {
 			// 
 			// button5
 			// 
-			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
+			//this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
 			this->button5->Location = System::Drawing::Point(534, 267);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(131, 131);
@@ -300,7 +300,7 @@ namespace FormsPOOstats {
 			// 
 			// button6
 			// 
-			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
+			//this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->Location = System::Drawing::Point(954, 267);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(131, 131);
@@ -310,7 +310,7 @@ namespace FormsPOOstats {
 			// 
 			// button7
 			// 
-			this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
+			//this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
 			this->button7->Location = System::Drawing::Point(98, 459);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(131, 131);
@@ -320,7 +320,7 @@ namespace FormsPOOstats {
 			// 
 			// button8
 			// 
-			this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
+			//this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
 			this->button8->Location = System::Drawing::Point(534, 459);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(131, 131);
@@ -330,7 +330,7 @@ namespace FormsPOOstats {
 			// 
 			// button9
 			// 
-			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
+			//this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->Location = System::Drawing::Point(954, 459);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(131, 131);

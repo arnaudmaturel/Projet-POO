@@ -599,17 +599,6 @@ namespace FormsPOOpersonnel {
 
 			int id_emp = Int32::Parse(textBox1->Text);
 
-			MySqlCommand^ cmd1 = gcnew MySqlCommand("select * from employe WHERE ID_EMPLOYE=" + id_emp + "", con);
-			MySqlDataReader^ dr1;
-
-			con->Open();
-			dr1 = cmd1->ExecuteReader();
-			while (dr1->Read())
-			{
-				textBox5->Text = dr1->GetString(5);
-			}
-			con->Close();
-
 			MySqlCommand^ cmd2 = gcnew MySqlCommand("select * from employe inner join adresse on EMPLOYE.ID_ADRESSE = ADRESSE.ID_ADRESSE WHERE ID_EMPLOYE=" + id_emp + "", con);
 			MySqlDataReader^ dr2;
 

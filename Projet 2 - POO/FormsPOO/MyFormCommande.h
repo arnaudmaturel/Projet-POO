@@ -64,6 +64,7 @@ namespace FormsPOOcommande {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ button7;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -106,6 +107,7 @@ namespace FormsPOOcommande {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
@@ -362,19 +364,32 @@ namespace FormsPOOcommande {
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(391, 447);
+			this->button6->Location = System::Drawing::Point(391, 436);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(292, 37);
+			this->button6->Size = System::Drawing::Size(130, 37);
 			this->button6->TabIndex = 24;
 			this->button6->Text = L"Paiement";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyFormCommande::button6_Click);
+			// 
+			// button7
+			// 
+			this->button7->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button7->Location = System::Drawing::Point(553, 436);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(130, 37);
+			this->button7->TabIndex = 25;
+			this->button7->Text = L"Articles";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyFormCommande::button7_Click);
 			// 
 			// MyFormCommande
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1180, 570);
+			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
@@ -554,6 +569,12 @@ namespace FormsPOOcommande {
 
 		FormsPOOpaiement::MyFormPaiement^ objPai = gcnew FormsPOOpaiement::MyFormPaiement;
 		objPai->ShowDialog();
+	}
+		   // Articles commande
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		FormsPOOarticleCom::MyFormArticleCom^ objArtC = gcnew FormsPOOarticleCom::MyFormArticleCom;
+		objArtC->ShowDialog();
 	}
 };
 }
