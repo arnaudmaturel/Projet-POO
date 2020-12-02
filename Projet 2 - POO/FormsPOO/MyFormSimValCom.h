@@ -129,7 +129,6 @@ namespace FormsPOO {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(77, 22);
 			this->textBox3->TabIndex = 6;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyFormSimValCom::textBox3_TextChanged);
 			// 
 			// Commit
 			// 

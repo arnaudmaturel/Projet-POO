@@ -1,4 +1,13 @@
 #pragma once
+#include "MyFormPanier_moy.h"
+#include "MyFormSimValCom.h"
+#include "MyformMontant.h"
+#include "MyFormTopMV.h"
+#include "MyFormTopPV.h"
+#include "MyFormValComS.h"
+#include "MyFormProdRupt.h"
+#include "MyFormCAMois.h"
+#include "MyFormValAchS.h"
 
 namespace FormsPOOstats {
 
@@ -257,6 +266,7 @@ namespace FormsPOOstats {
 			this->button2->Size = System::Drawing::Size(131, 131);
 			this->button2->TabIndex = 13;
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyFormStats::button2_Click);
 			// 
 			// button3
 			// 
@@ -266,6 +276,7 @@ namespace FormsPOOstats {
 			this->button3->Size = System::Drawing::Size(131, 131);
 			this->button3->TabIndex = 14;
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyFormStats::button3_Click);
 			// 
 			// button4
 			// 
@@ -275,6 +286,7 @@ namespace FormsPOOstats {
 			this->button4->Size = System::Drawing::Size(131, 131);
 			this->button4->TabIndex = 15;
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyFormStats::button4_Click);
 			// 
 			// button5
 			// 
@@ -284,6 +296,7 @@ namespace FormsPOOstats {
 			this->button5->Size = System::Drawing::Size(131, 131);
 			this->button5->TabIndex = 16;
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyFormStats::button5_Click);
 			// 
 			// button6
 			// 
@@ -293,6 +306,7 @@ namespace FormsPOOstats {
 			this->button6->Size = System::Drawing::Size(131, 131);
 			this->button6->TabIndex = 17;
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyFormStats::button6_Click);
 			// 
 			// button7
 			// 
@@ -302,6 +316,7 @@ namespace FormsPOOstats {
 			this->button7->Size = System::Drawing::Size(131, 131);
 			this->button7->TabIndex = 18;
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyFormStats::button7_Click);
 			// 
 			// button8
 			// 
@@ -311,6 +326,7 @@ namespace FormsPOOstats {
 			this->button8->Size = System::Drawing::Size(131, 131);
 			this->button8->TabIndex = 19;
 			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyFormStats::button8_Click);
 			// 
 			// button9
 			// 
@@ -320,6 +336,7 @@ namespace FormsPOOstats {
 			this->button9->Size = System::Drawing::Size(131, 131);
 			this->button9->TabIndex = 20;
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyFormStats::button9_Click);
 			// 
 			// MyFormStats
 			// 
@@ -355,5 +372,61 @@ namespace FormsPOOstats {
 
 		}
 #pragma endregion
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormPanier_moy^ objPers1 = gcnew FormsPOO::MyFormPanier_moy();
+	objPers1->ShowDialog();
+	this->Show();
+	}
+
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormSimValCom^ objPers1 = gcnew FormsPOO::MyFormSimValCom();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyformMontant^ objPers1 = gcnew FormsPOO::MyformMontant();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormTopMV^ objPers1 = gcnew FormsPOO::MyFormTopMV();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormTopPV^ objPers1 = gcnew FormsPOO::MyFormTopPV();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormValComS^ objPers1 = gcnew FormsPOO::MyFormValComS();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormProdRupt^ objPers1 = gcnew FormsPOO::MyFormProdRupt();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormCAMois^ objPers1 = gcnew FormsPOO::MyFormCAMois();
+	objPers1->ShowDialog();
+	this->Show();
+}
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	FormsPOO::MyFormValAchS^ objPers1 = gcnew FormsPOO::MyFormValAchS();
+	objPers1->ShowDialog();
+	this->Show();
+}
 };
 }

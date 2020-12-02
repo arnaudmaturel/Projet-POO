@@ -65,7 +65,6 @@ namespace FormsPOO {
 			this->label1->Size = System::Drawing::Size(405, 32);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Valeur commerciale du stock";
-			this->label1->Click += gcnew System::EventHandler(this, &MyFormValComS::label1_Click);
 			// 
 			// textBox1
 			// 
