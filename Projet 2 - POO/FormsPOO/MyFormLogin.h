@@ -68,7 +68,7 @@ namespace FormsPOO {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(123, 19);
+			this->label1->Location = System::Drawing::Point(180, 32);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(666, 32);
 			this->label1->TabIndex = 0;
@@ -114,7 +114,7 @@ namespace FormsPOO {
 			// 
 			// Login_btn
 			// 
-			this->Login_btn->Location = System::Drawing::Point(400, 318);
+			this->Login_btn->Location = System::Drawing::Point(440, 308);
 			this->Login_btn->Name = L"Login_btn";
 			this->Login_btn->Size = System::Drawing::Size(134, 42);
 			this->Login_btn->TabIndex = 5;
