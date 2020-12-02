@@ -51,13 +51,13 @@ namespace FormsPOOarticle {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ acceuilToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ menuToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesClientsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesArticlesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDuStockToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesStatistiquesToolStripMenuItem;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label8;
 
 	private: System::Windows::Forms::TextBox^ textBox1;
@@ -105,13 +105,6 @@ namespace FormsPOOarticle {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->acceuilToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->menuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDesClientsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDesArticlesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDuStockToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDesStatistiquesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -124,7 +117,6 @@ namespace FormsPOOarticle {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -238,59 +230,6 @@ namespace FormsPOOarticle {
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(526, 429);
 			this->dataGridView1->TabIndex = 12;
-			// 
-			// menuStrip1
-			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->acceuilToolStripMenuItem,
-					this->menuToolStripMenuItem
-			});
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1172, 24);
-			this->menuStrip1->TabIndex = 13;
-			this->menuStrip1->Text = L"menuStrip1";
-			// 
-			// acceuilToolStripMenuItem
-			// 
-			this->acceuilToolStripMenuItem->Name = L"acceuilToolStripMenuItem";
-			this->acceuilToolStripMenuItem->Size = System::Drawing::Size(58, 20);
-			this->acceuilToolStripMenuItem->Text = L"Acceuil";
-			this->acceuilToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyFormArticle::acceuilToolStripMenuItem_Click);
-			// 
-			// menuToolStripMenuItem
-			// 
-			this->menuToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->gestionDesClientsToolStripMenuItem,
-					this->gestionDesArticlesToolStripMenuItem, this->gestionDuStockToolStripMenuItem, this->gestionDesStatistiquesToolStripMenuItem
-			});
-			this->menuToolStripMenuItem->Name = L"menuToolStripMenuItem";
-			this->menuToolStripMenuItem->Size = System::Drawing::Size(50, 20);
-			this->menuToolStripMenuItem->Text = L"Menu";
-			// 
-			// gestionDesClientsToolStripMenuItem
-			// 
-			this->gestionDesClientsToolStripMenuItem->Name = L"gestionDesClientsToolStripMenuItem";
-			this->gestionDesClientsToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesClientsToolStripMenuItem->Text = L"Gestion du personnel";
-			// 
-			// gestionDesArticlesToolStripMenuItem
-			// 
-			this->gestionDesArticlesToolStripMenuItem->Name = L"gestionDesArticlesToolStripMenuItem";
-			this->gestionDesArticlesToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesArticlesToolStripMenuItem->Text = L"Gestion des clients";
-			// 
-			// gestionDuStockToolStripMenuItem
-			// 
-			this->gestionDuStockToolStripMenuItem->Name = L"gestionDuStockToolStripMenuItem";
-			this->gestionDuStockToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDuStockToolStripMenuItem->Text = L"Gestion du stock ";
-			// 
-			// gestionDesStatistiquesToolStripMenuItem
-			// 
-			this->gestionDesStatistiquesToolStripMenuItem->Name = L"gestionDesStatistiquesToolStripMenuItem";
-			this->gestionDesStatistiquesToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesStatistiquesToolStripMenuItem->Text = L"Gestion des statistiques";
 			// 
 			// label8
 			// 
@@ -417,14 +356,10 @@ namespace FormsPOOarticle {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->menuStrip1);
-			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyFormArticle";
 			this->Text = L"Gestion des Articles";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->menuStrip1->ResumeLayout(false);
-			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

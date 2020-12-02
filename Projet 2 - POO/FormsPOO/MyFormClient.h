@@ -52,13 +52,13 @@ namespace FormsPOOclient {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ acceuilToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ menuToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesClientsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesArticlesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDuStockToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ gestionDesStatistiquesToolStripMenuItem;
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
@@ -67,6 +67,9 @@ namespace FormsPOOclient {
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::BindingSource^ bindingSource2;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::Label^ label6;
 
 
 
@@ -98,13 +101,6 @@ namespace FormsPOOclient {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->acceuilToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->menuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDesClientsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDesArticlesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDuStockToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->gestionDesStatistiquesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -113,9 +109,13 @@ namespace FormsPOOclient {
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->menuStrip1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -166,7 +166,7 @@ namespace FormsPOOclient {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(12, 466);
+			this->button1->Location = System::Drawing::Point(12, 499);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(143, 36);
 			this->button1->TabIndex = 7;
@@ -178,7 +178,7 @@ namespace FormsPOOclient {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(161, 466);
+			this->button2->Location = System::Drawing::Point(161, 499);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(143, 36);
 			this->button2->TabIndex = 8;
@@ -190,7 +190,7 @@ namespace FormsPOOclient {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(310, 466);
+			this->button3->Location = System::Drawing::Point(310, 499);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(143, 36);
 			this->button3->TabIndex = 9;
@@ -227,61 +227,8 @@ namespace FormsPOOclient {
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(622, 107);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(540, 395);
+			this->dataGridView1->Size = System::Drawing::Size(540, 233);
 			this->dataGridView1->TabIndex = 12;
-			// 
-			// menuStrip1
-			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->acceuilToolStripMenuItem,
-					this->menuToolStripMenuItem
-			});
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1174, 24);
-			this->menuStrip1->TabIndex = 13;
-			this->menuStrip1->Text = L"menuStrip1";
-			// 
-			// acceuilToolStripMenuItem
-			// 
-			this->acceuilToolStripMenuItem->Name = L"acceuilToolStripMenuItem";
-			this->acceuilToolStripMenuItem->Size = System::Drawing::Size(58, 20);
-			this->acceuilToolStripMenuItem->Text = L"Acceuil";
-			this->acceuilToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyFormClient::acceuilToolStripMenuItem_Click);
-			// 
-			// menuToolStripMenuItem
-			// 
-			this->menuToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->gestionDesClientsToolStripMenuItem,
-					this->gestionDesArticlesToolStripMenuItem, this->gestionDuStockToolStripMenuItem, this->gestionDesStatistiquesToolStripMenuItem
-			});
-			this->menuToolStripMenuItem->Name = L"menuToolStripMenuItem";
-			this->menuToolStripMenuItem->Size = System::Drawing::Size(50, 20);
-			this->menuToolStripMenuItem->Text = L"Menu";
-			// 
-			// gestionDesClientsToolStripMenuItem
-			// 
-			this->gestionDesClientsToolStripMenuItem->Name = L"gestionDesClientsToolStripMenuItem";
-			this->gestionDesClientsToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesClientsToolStripMenuItem->Text = L"Gestion du personnel";
-			// 
-			// gestionDesArticlesToolStripMenuItem
-			// 
-			this->gestionDesArticlesToolStripMenuItem->Name = L"gestionDesArticlesToolStripMenuItem";
-			this->gestionDesArticlesToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesArticlesToolStripMenuItem->Text = L"Gestion des articles";
-			// 
-			// gestionDuStockToolStripMenuItem
-			// 
-			this->gestionDuStockToolStripMenuItem->Name = L"gestionDuStockToolStripMenuItem";
-			this->gestionDuStockToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDuStockToolStripMenuItem->Text = L"Gestion du stock ";
-			// 
-			// gestionDesStatistiquesToolStripMenuItem
-			// 
-			this->gestionDesStatistiquesToolStripMenuItem->Name = L"gestionDesStatistiquesToolStripMenuItem";
-			this->gestionDesStatistiquesToolStripMenuItem->Size = System::Drawing::Size(197, 22);
-			this->gestionDesStatistiquesToolStripMenuItem->Text = L"Gestion des statistiques";
 			// 
 			// label8
 			// 
@@ -362,11 +309,32 @@ namespace FormsPOOclient {
 			this->label5->TabIndex = 21;
 			this->label5->Text = L"Adresse :";
 			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(622, 385);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->Size = System::Drawing::Size(540, 150);
+			this->dataGridView2->TabIndex = 22;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(617, 357);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(241, 25);
+			this->label6->TabIndex = 23;
+			this->label6->Text = L"Adresses du client :";
+			// 
 			// MyFormClient
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1174, 514);
+			this->ClientSize = System::Drawing::Size(1174, 547);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->dataGridView2);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->textBox5);
@@ -385,14 +353,12 @@ namespace FormsPOOclient {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->menuStrip1);
-			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyFormClient";
 			this->Text = L"Gestion des clients";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->menuStrip1->ResumeLayout(false);
-			this->menuStrip1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -515,6 +481,14 @@ namespace FormsPOOclient {
 				textBox5->Text = dr->GetString(4);
 			}
 			con->Close();
+
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT ADRESSE.VILLE, ADRESSE.ADRESSE, ADRESSE.CP, ADRESSE.NUMERO_CLIENT_LIVRAISON, adresse.NUMERO_CLIENT_FACTURATION, client.NUMERO_CLIENT, client.NOM_CLIENT, client.PRENOM_CLIENT FROM adresse INNER JOIN client WHERE (adresse.NUMERO_CLIENT_LIVRAISON = " + id_cli + " AND ADRESSE.NUMERO_CLIENT_LIVRAISON = client.NUMERO_CLIENT) OR (adresse.NUMERO_CLIENT_FACTURATION = " + id_cli + " AND ADRESSE.NUMERO_CLIENT_FACTURATION = client.NUMERO_CLIENT)", con);
+			DataTable^ dt = gcnew DataTable();
+
+			sda->Fill(dt);
+
+			bindingSource2->DataSource = dt;
+			dataGridView2->DataSource = bindingSource2;
 
 		}
 		catch (Exception^ ex)

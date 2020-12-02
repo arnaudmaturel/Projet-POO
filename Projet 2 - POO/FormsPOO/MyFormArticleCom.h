@@ -239,7 +239,29 @@ namespace FormsPOOarticleCom {
 		// Go
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
+			int ref_art= Int32::Parse(textBox1->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("select * from integrer where id_commande=" + ref_art + "", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			while (dr->Read())
+			{
+				textBox2->Text = dr->GetString(1);
+				textBox3->Text = dr->GetString(2);
+			}
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
 	}
 		   // Fetch
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -264,17 +286,75 @@ namespace FormsPOOarticleCom {
 		   // Insert
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
+			int ref_art = Int32::Parse(textBox1->Text);
+			int id_com = Int32::Parse(textBox2->Text);
+			int quantite_art = Int32::Parse(textBox3->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("insert into commande values(" + ref_art + "," + id_com + "," + quantite_art + ")", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			MessageBox::Show("Les articles de la commande ont été enregistrés");
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
 	}
 		   // Update
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
+			int ref_art = Int32::Parse(textBox1->Text);
+			int id_com = Int32::Parse(textBox2->Text);
+			int quantite_art = Int32::Parse(textBox3->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("update commande set id_commande=" + id_com + ", quantite_article_commande" + quantite_art + " where reference_article=" + ref_art + "", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			MessageBox::Show("Les articles de la commande ont été modifiés");
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
 	}
 		   // Delete
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		try
+		{
+			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
+			int ref_art = Int32::Parse(textBox1->Text);
+
+			MySqlCommand^ cmd = gcnew MySqlCommand("delete from commande where reference_article=" + ref_art + "", con);
+			MySqlDataReader^ dr;
+
+			con->Open();
+			dr = cmd->ExecuteReader();
+			MessageBox::Show("Les articles de la commande ont été supprimés");
+			con->Close();
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
 	}
 };
 }
