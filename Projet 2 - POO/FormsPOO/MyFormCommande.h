@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MyFormPaiement.h"
+#include "MyFormArticleCom.h"
 
 namespace FormsPOOcommande {
 

@@ -1,18 +1,18 @@
 #include "stdafx.h"
-#include "MyFormArticleCom.h"
+#include "MyFormLogin.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 
 [STAThread]
-void MainArtC(array<String^>^ args)
+void MainLogin(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	// Nom du projet
-	FormsPOOarticleCom::MyFormArticleCom formArticleCom;
+	FormsPOO::MyFormLogin formLogin;
 
-	Application::Run(% formArticleCom);
+	Application::Run(% formLogin);
 }
