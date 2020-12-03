@@ -4,15 +4,14 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-
 [STAThread]
-void MainLogin(array<String^>^ args)
+void MainLog(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	// Nom du projet
-	FormsPOO::MyFormLogin formLogin;
+	FormsPOOlog::MyFormLogin formLogin;
 
 	Application::Run(% formLogin);
 }

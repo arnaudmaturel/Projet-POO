@@ -12,7 +12,6 @@ namespace FormsPOOclient {
 	using namespace System::Drawing;
 	using namespace MySql::Data::MySqlClient;
 
-
 	/// <summary>
 	/// Description r?sum?e de MyForm
 	/// </summary>
@@ -42,9 +41,6 @@ namespace FormsPOOclient {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
-
-
-
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
@@ -52,13 +48,6 @@ namespace FormsPOOclient {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
@@ -70,10 +59,8 @@ namespace FormsPOOclient {
 	private: System::Windows::Forms::BindingSource^ bindingSource2;
 	private: System::Windows::Forms::DataGridView^ dataGridView2;
 	private: System::Windows::Forms::Label^ label6;
-
-
-
 	private: System::ComponentModel::IContainer^ components;
+
 	protected:
 
 	private:
