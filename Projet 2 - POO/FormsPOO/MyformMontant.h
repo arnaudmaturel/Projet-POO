@@ -94,7 +94,7 @@ namespace FormsPOO {
 			// Nom_client
 			// 
 			this->Nom_client->AutoSize = true;
-			this->Nom_client->Location = System::Drawing::Point(12, 127);
+			this->Nom_client->Location = System::Drawing::Point(32, 127);
 			this->Nom_client->Name = L"Nom_client";
 			this->Nom_client->Size = System::Drawing::Size(74, 17);
 			this->Nom_client->TabIndex = 1;
@@ -155,7 +155,7 @@ namespace FormsPOO {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(130, 228);
+			this->textBox3->Location = System::Drawing::Point(130, 225);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(208, 22);
 			this->textBox3->TabIndex = 8;
@@ -193,14 +193,20 @@ namespace FormsPOO {
 
 		}
 #pragma endregion
-		int ID_Client; 
+		String^ ID_Client; 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ NomClient = textBox1->Text;
 		String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 		MySqlConnection^ con = gcnew MySqlConnection(constr);
-		MySqlCommand^ cmd = gcnew MySqlCommand("Select * from client WHERE NOM_CLIENT="+NomClient, con);
-
-
+		MySqlCommand^ cmd = gcnew MySqlCommand("SELECT * FROM `client` WHERE `NOM_CLIENT`='"+NomClient+"'", con);
+		con->Open();
+		MySqlDataReader^ dr = cmd->ExecuteReader();
+		while (dr->Read()){
+			textBox2->Text = dr->GetString(2);
+			ID_Client = dr->GetString(0);
+			textBox3->Text = dr->GetString(0);
+		}
+		con->Close();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
