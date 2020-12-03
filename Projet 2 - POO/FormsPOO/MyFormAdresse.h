@@ -10,6 +10,7 @@ namespace FormsPOOadresse {
 	using namespace System::Drawing;
 	using namespace MySql::Data::MySqlClient;
 
+	class MyFormLogin;
 
 	/// <summary>
 	/// Description résumée de MyFormAdresse
@@ -24,6 +25,7 @@ namespace FormsPOOadresse {
 			//TODO: ajoutez ici le code du constructeur
 			//
 		}
+
 
 	protected:
 		/// <summary>

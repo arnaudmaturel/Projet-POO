@@ -10,12 +10,22 @@ namespace FormsPOOpersonnel {
 	using namespace System::Drawing;
 	using namespace MySql::Data::MySqlClient;
 
-
 	/// <summary>
 	/// Description résumée de MyForm1
 	/// </summary>
 	public ref class MyFormPersonnel : public System::Windows::Forms::Form
 	{
+
+	public: String^ serv;
+	public: String^ ident;
+	public: String^ mdp;
+
+	public:
+
+
+
+	public: String^ bdd;
+
 	public:
 		MyFormPersonnel(void)
 		{
@@ -50,13 +60,6 @@ namespace FormsPOOpersonnel {
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-
-
-
-
-
-
-
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
@@ -401,6 +404,7 @@ namespace FormsPOOpersonnel {
 
 		}
 #pragma endregion
+
 	private: System::Void acceuilToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		/*this->Hide();
