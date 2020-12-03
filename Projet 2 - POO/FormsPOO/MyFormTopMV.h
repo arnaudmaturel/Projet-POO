@@ -67,7 +67,7 @@ namespace FormsPOO {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(144, 72);
+			this->dataGridView1->Location = System::Drawing::Point(164, 59);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
@@ -119,12 +119,12 @@ namespace FormsPOO {
 		try {
 			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 			MySqlConnection^ con = gcnew MySqlConnection(constr);
-			MySqlCommand^ cmd = gcnew MySqlCommand("SELECT article.DESIGNATION AS Top10DesPlusVendus FROM article, integrer WHERE article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE LIMIT 10;", con);
-			MySqlDataReader^ dr;
 
-			con->Open();
-			dr = cmd->ExecuteReader();
-			con->Close();
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT article.DESIGNATION AS Top10DesPlusVendus FROM article, integrer WHERE article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE LIMIT 10;", con);
+			DataTable^ dt = gcnew DataTable();
+			sda->Fill(dt);
+			bindingSource1->DataSource = dt;
+			dataGridView1->DataSource = bindingSource1;
 		}
 		catch (Exception^ ex) {
 			MessageBox::Show(ex->Message);
@@ -132,13 +132,3 @@ namespace FormsPOO {
 	}
 	};
 }
-
-/*SELECT article.DESIGNATION AS Top10DesPlusVendus FROM article, integrer WHERE article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE LIMIT 10;*/
-
-/*
-MySqlCommand^ cmd1 = gcnew MySqlCommand("insert request", con);
-			MySqlDataReader^ dr1;
-
-			con->Open();
-			dr1 = cmd1->ExecuteReader();
-			con->Close()*/
