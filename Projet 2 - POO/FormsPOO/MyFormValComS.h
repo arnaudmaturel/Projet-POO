@@ -73,7 +73,7 @@ namespace FormsPOO {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(170, 218);
+			this->textBox1->Location = System::Drawing::Point(373, 210);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(332, 22);
 			this->textBox1->TabIndex = 1;

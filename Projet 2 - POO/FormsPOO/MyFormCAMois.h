@@ -56,6 +56,9 @@ namespace FormsPOO {
 	private: System::Windows::Forms::RadioButton^ radioButton10;
 	private: System::Windows::Forms::RadioButton^ radioButton11;
 	private: System::Windows::Forms::RadioButton^ radioButton12;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
+
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -92,7 +95,9 @@ namespace FormsPOO {
 			this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton11 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton12 = (gcnew System::Windows::Forms::RadioButton());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -111,7 +116,7 @@ namespace FormsPOO {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(98, 108);
+			this->label2->Location = System::Drawing::Point(166, 119);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(96, 32);
 			this->label2->TabIndex = 1;
@@ -122,7 +127,7 @@ namespace FormsPOO {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(342, 236);
+			this->label3->Location = System::Drawing::Point(166, 227);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(120, 32);
 			this->label3->TabIndex = 2;
@@ -130,14 +135,14 @@ namespace FormsPOO {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(537, 246);
+			this->textBox1->Location = System::Drawing::Point(352, 237);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(199, 22);
 			this->textBox1->TabIndex = 4;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(454, 331);
+			this->button1->Location = System::Drawing::Point(249, 328);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(163, 32);
 			this->button1->TabIndex = 6;
@@ -289,11 +294,22 @@ namespace FormsPOO {
 			this->radioButton12->UseVisualStyleBackColor = true;
 			this->radioButton12->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton12_CheckedChanged);
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(563, 274);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->RowTemplate->Height = 24;
+			this->dataGridView1->Size = System::Drawing::Size(412, 150);
+			this->dataGridView1->TabIndex = 19;
+			// 
 			// MyFormCAMois
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1034, 557);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->radioButton10);
 			this->Controls->Add(this->radioButton11);
 			this->Controls->Add(this->radioButton12);
@@ -314,6 +330,7 @@ namespace FormsPOO {
 			this->Name = L"MyFormCAMois";
 			this->Text = L"MyFormCAMois";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -373,14 +390,12 @@ namespace FormsPOO {
 			else {
 				DayE = 31;
 			}
-			MySqlCommand^ cmd = gcnew MySqlCommand("SELECT SUM(paiement.MONTANT_PAIEMENT) AS ChiffeDAffaire FROM paiement WHERE paiement.DATE_PAIEMENT BETWEEN " + Year + "-" + Month + "-01 AND " + Year + "-" + Month + "-" + DayE, con);
-			MySqlDataReader^ dr;
 
-			con->Open();
-			dr = cmd->ExecuteReader();
-			//String^ msg = MySqlDataReader();
-			//MessageBox::Show(MySqlDataReader());
-			con->Close();
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT SUM(paiement.MONTANT_PAIEMENT) AS ChiffeDAffaire FROM paiement WHERE paiement.DATE_PAIEMENT BETWEEN " + Year + "-" + Month + "-01 AND " + Year + "-" + Month + "-" + DayE, con);
+			DataTable^ dt = gcnew DataTable();
+			sda->Fill(dt);
+			bindingSource1->DataSource = dt;
+			dataGridView1->DataSource = bindingSource1;
 		}
 		catch (Exception^ ex) {
 			MessageBox::Show(ex->Message);
