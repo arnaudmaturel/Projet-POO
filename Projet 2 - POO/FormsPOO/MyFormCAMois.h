@@ -378,7 +378,8 @@ namespace FormsPOO {
 
 			con->Open();
 			dr = cmd->ExecuteReader();
-			MessageBox::Show();
+			//String^ msg = MySqlDataReader();
+			//MessageBox::Show(MySqlDataReader());
 			con->Close();
 		}
 		catch (Exception^ ex) {

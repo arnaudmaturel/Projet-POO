@@ -41,14 +41,17 @@ namespace FormsPOO {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::ComponentModel::IContainer^ components;
+
+
 
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -57,15 +60,17 @@ namespace FormsPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Nom_client = (gcnew System::Windows::Forms::Label());
 			this->Prenom_client = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -114,37 +119,28 @@ namespace FormsPOO {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(362, 146);
+			this->dataGridView1->Location = System::Drawing::Point(362, 103);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(449, 268);
 			this->dataGridView1->TabIndex = 5;
 			// 
-			// label2
+			// button1
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(69, 285);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(171, 17);
-			this->label2->TabIndex = 6;
-			this->label2->Text = L"Montant total des achats: ";
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(72, 330);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(183, 22);
-			this->textBox3->TabIndex = 7;
-			this->textBox3->Text = L"\?\?";
+			this->button1->Location = System::Drawing::Point(151, 264);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(136, 35);
+			this->button1->TabIndex = 6;
+			this->button1->Text = L"Rechercher";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// MyformMontant
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(823, 524);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->label2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
@@ -154,6 +150,7 @@ namespace FormsPOO {
 			this->Name = L"MyformMontant";
 			this->Text = L"MyformMontant";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
