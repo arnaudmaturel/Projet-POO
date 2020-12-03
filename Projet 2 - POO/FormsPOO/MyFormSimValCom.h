@@ -44,6 +44,8 @@ namespace FormsPOO {
 	private: System::Windows::Forms::Button^ Commit;
 
 	private: System::Windows::Forms::TextBox^ Display;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::ComponentModel::IContainer^ components;
 
 	protected:
 
@@ -51,7 +53,7 @@ namespace FormsPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -60,6 +62,7 @@ namespace FormsPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Btn_TVA1 = (gcnew System::Windows::Forms::Button());
 			this->Btn_TVA2 = (gcnew System::Windows::Forms::Button());
@@ -69,6 +72,8 @@ namespace FormsPOO {
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->Commit = (gcnew System::Windows::Forms::Button());
 			this->Display = (gcnew System::Windows::Forms::TextBox());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -163,6 +168,7 @@ namespace FormsPOO {
 			this->Controls->Add(this->label1);
 			this->Name = L"MyFormSimValCom";
 			this->Text = L"Simulation de valeur commerciale";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

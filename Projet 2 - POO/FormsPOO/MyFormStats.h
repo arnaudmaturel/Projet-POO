@@ -52,6 +52,8 @@ namespace FormsPOOstats {
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -71,7 +73,7 @@ namespace FormsPOOstats {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -80,6 +82,7 @@ namespace FormsPOOstats {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::Windows::Forms::Label^ label1;
 			System::Windows::Forms::Label^ label2;
 			System::Windows::Forms::Label^ label3;
@@ -92,7 +95,6 @@ namespace FormsPOOstats {
 			System::Windows::Forms::Label^ label10;
 			System::Windows::Forms::Label^ label11;
 			System::Windows::Forms::Label^ label12;
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyFormStats::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -102,6 +104,7 @@ namespace FormsPOOstats {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			label1 = (gcnew System::Windows::Forms::Label());
 			label2 = (gcnew System::Windows::Forms::Label());
 			label3 = (gcnew System::Windows::Forms::Label());
@@ -114,6 +117,7 @@ namespace FormsPOOstats {
 			label10 = (gcnew System::Windows::Forms::Label());
 			label11 = (gcnew System::Windows::Forms::Label());
 			label12 = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -250,7 +254,6 @@ namespace FormsPOOstats {
 			// 
 			// button1
 			// 
-			//this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->Location = System::Drawing::Point(98, 64);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(131, 131);
@@ -260,7 +263,6 @@ namespace FormsPOOstats {
 			// 
 			// button2
 			// 
-			//this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
 			this->button2->Location = System::Drawing::Point(534, 64);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(131, 131);
@@ -270,7 +272,6 @@ namespace FormsPOOstats {
 			// 
 			// button3
 			// 
-			//this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(954, 64);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(131, 131);
@@ -280,7 +281,6 @@ namespace FormsPOOstats {
 			// 
 			// button4
 			// 
-			//this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->Location = System::Drawing::Point(98, 267);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(131, 131);
@@ -290,7 +290,6 @@ namespace FormsPOOstats {
 			// 
 			// button5
 			// 
-			//this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
 			this->button5->Location = System::Drawing::Point(534, 267);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(131, 131);
@@ -300,7 +299,6 @@ namespace FormsPOOstats {
 			// 
 			// button6
 			// 
-			//this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->Location = System::Drawing::Point(954, 267);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(131, 131);
@@ -310,7 +308,6 @@ namespace FormsPOOstats {
 			// 
 			// button7
 			// 
-			//this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
 			this->button7->Location = System::Drawing::Point(98, 459);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(131, 131);
@@ -320,7 +317,6 @@ namespace FormsPOOstats {
 			// 
 			// button8
 			// 
-			//this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
 			this->button8->Location = System::Drawing::Point(534, 459);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(131, 131);
@@ -330,7 +326,6 @@ namespace FormsPOOstats {
 			// 
 			// button9
 			// 
-			//this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->Location = System::Drawing::Point(954, 459);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(131, 131);
@@ -367,6 +362,7 @@ namespace FormsPOOstats {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyFormStats";
 			this->Text = L"Statistique de l\'entreprise";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
