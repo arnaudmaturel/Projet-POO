@@ -295,11 +295,42 @@ namespace FormsPOOarticleCom {
 			int id_com = Int32::Parse(textBox2->Text);
 			int quantite_art = Int32::Parse(textBox3->Text);
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("insert into commande values(" + ref_art + "," + id_com + "," + quantite_art + ")", con);
-			MySqlDataReader^ dr;
+			MySqlCommand^ cmd1 = gcnew MySqlCommand("insert into integrer values(" + ref_art + "," + id_com + "," + quantite_art + ")", con);
+			MySqlDataReader^ dr1;
 
 			con->Open();
-			dr = cmd->ExecuteReader();
+			dr1 = cmd1->ExecuteReader();
+			con->Close();
+
+			MySqlCommand^ cmd2 = gcnew MySqlCommand("INSERT INTO prix_commande(ID_COMMANDE,ID_ARTICLE) VALUES(" + id_com + "," + ref_art + ")", con);
+			MySqlDataReader^ dr2;
+
+			con->Open();
+			dr2 = cmd2->ExecuteReader();
+			con->Close();
+
+			// Update nombre articles
+			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE prix_commande SET NOMBRE_ARTICLE=(SELECT integrer.QUANTITE_ARTICLE_COMMANDE FROM integrer INNER JOIN commande ON integrer.ID_COMMANDE = commande.ID_COMMANDE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
+			MySqlDataReader^ dr3;
+
+			con->Open();
+			dr3 = cmd3->ExecuteReader();
+			con->Close();
+
+			// Update du calcul des prix
+			MySqlCommand^ cmd4 = gcnew MySqlCommand("UPDATE prix_commande SET PRIX_HT=(SELECT article.PRIX_HT * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "), COUT_TVA=(SELECT (((article.TAUX_TVA / " + 100 + ") * article.PRIX_HT) * integrer.QUANTITE_ARTICLE_COMMANDE) FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "),PRIX_TTC=(SELECT article.PRIX_TTC * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
+			MySqlDataReader^ dr4;
+
+			con->Open();
+			dr4 = cmd4->ExecuteReader();
+			con->Close();
+
+			// Update du calcul des prix
+			MySqlCommand^ cmd5 = gcnew MySqlCommand("UPDATE commande SET commande.PRIX_TOTAL_HT=(SELECT SUM(PRIX_HT) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE),commande.PRIX_TOTAL_TTC=(SELECT SUM(PRIX_TTC) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE),commande.COUT_TOTAL_TVA=(SELECT SUM(COUT_TVA) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE) WHERE commande.ID_COMMANDE = " + id_com + "", con);
+			MySqlDataReader^ dr5;
+
+			con->Open();
+			dr5 = cmd5->ExecuteReader();
 			MessageBox::Show("Les articles de la commande ont été enregistrés");
 			con->Close();
 		}
@@ -320,11 +351,35 @@ namespace FormsPOOarticleCom {
 			int id_com = Int32::Parse(textBox2->Text);
 			int quantite_art = Int32::Parse(textBox3->Text);
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("update commande set id_commande=" + id_com + ", quantite_article_commande" + quantite_art + " where reference_article=" + ref_art + "", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("update integrer set id_commande=" + id_com + ", quantite_article_commande" + quantite_art + " where reference_article=" + ref_art + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
 			dr = cmd->ExecuteReader();
+			con->Close();
+
+			// Update nombre articles
+			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE prix_commande SET NOMBRE_ARTICLE=(SELECT integrer.QUANTITE_ARTICLE_COMMANDE FROM integrer INNER JOIN commande ON integrer.ID_COMMANDE = commande.ID_COMMANDE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
+			MySqlDataReader^ dr3;
+
+			con->Open();
+			dr3 = cmd3->ExecuteReader();
+			con->Close();
+
+			// Update du calcul des prix
+			MySqlCommand^ cmd4 = gcnew MySqlCommand("UPDATE prix_commande SET PRIX_HT=(SELECT article.PRIX_HT * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "), COUT_TVA=(SELECT (((article.TAUX_TVA / " + 100 + ") * article.PRIX_HT) * integrer.QUANTITE_ARTICLE_COMMANDE) FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "),PRIX_TTC=(SELECT article.PRIX_TTC * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
+			MySqlDataReader^ dr4;
+
+			con->Open();
+			dr4 = cmd4->ExecuteReader();
+			con->Close();
+
+			// Update du calcul des prix
+			MySqlCommand^ cmd5 = gcnew MySqlCommand("UPDATE commande SET commande.PRIX_TOTAL_HT=(SELECT SUM(PRIX_HT) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE),commande.PRIX_TOTAL_TTC=(SELECT SUM(PRIX_TTC) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE),commande.COUT_TOTAL_TVA=(SELECT SUM(COUT_TVA) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE) WHERE commande.ID_COMMANDE = " + id_com + "", con);
+			MySqlDataReader^ dr5;
+
+			con->Open();
+			dr5 = cmd5->ExecuteReader();
 			MessageBox::Show("Les articles de la commande ont été modifiés");
 			con->Close();
 		}
@@ -342,12 +397,38 @@ namespace FormsPOOarticleCom {
 			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
 			int ref_art = Int32::Parse(textBox1->Text);
+			int id_com = Int32::Parse(textBox2->Text);
+			int quantite_art = Int32::Parse(textBox3->Text);
 
-			MySqlCommand^ cmd = gcnew MySqlCommand("delete from commande where reference_article=" + ref_art + "", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("delete from integrer where reference_article=" + ref_art + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
 			dr = cmd->ExecuteReader();
+			con->Close();
+
+			// Update nombre articles
+			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE prix_commande SET NOMBRE_ARTICLE=(SELECT integrer.QUANTITE_ARTICLE_COMMANDE FROM integrer INNER JOIN commande ON integrer.ID_COMMANDE = commande.ID_COMMANDE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
+			MySqlDataReader^ dr3;
+
+			con->Open();
+			dr3 = cmd3->ExecuteReader();
+			con->Close();
+
+			// Update du calcul des prix
+			MySqlCommand^ cmd4 = gcnew MySqlCommand("UPDATE prix_commande SET PRIX_HT=(SELECT article.PRIX_HT * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "), COUT_TVA=(SELECT (((article.TAUX_TVA / " + 100 + ") * article.PRIX_HT) * integrer.QUANTITE_ARTICLE_COMMANDE) FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "),PRIX_TTC=(SELECT article.PRIX_TTC * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
+			MySqlDataReader^ dr4;
+
+			con->Open();
+			dr4 = cmd4->ExecuteReader();
+			con->Close();
+
+			// Update du calcul des prix
+			MySqlCommand^ cmd5 = gcnew MySqlCommand("UPDATE commande SET commande.PRIX_TOTAL_HT=(SELECT SUM(PRIX_HT) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE),commande.PRIX_TOTAL_TTC=(SELECT SUM(PRIX_TTC) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE),commande.COUT_TOTAL_TVA=(SELECT SUM(COUT_TVA) FROM prix_commande INNER JOIN integrer ON prix_commande.ID_COMMANDE = integrer.ID_COMMANDE) WHERE commande.ID_COMMANDE = " + id_com + "", con);
+			MySqlDataReader^ dr5;
+
+			con->Open();
+			dr5 = cmd5->ExecuteReader();
 			MessageBox::Show("Les articles de la commande ont été supprimés");
 			con->Close();
 		}

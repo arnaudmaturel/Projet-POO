@@ -41,22 +41,22 @@ namespace FormsPOOcommande {
 	private: System::Windows::Forms::Label^ label1;
 	protected:
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
+
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label9;
+
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
+
+
+
+
+
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button1;
@@ -84,22 +84,12 @@ namespace FormsPOOcommande {
 			this->components = (gcnew System::ComponentModel::Container());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -135,23 +125,12 @@ namespace FormsPOOcommande {
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Numéro client :";
 			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(30, 147);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(355, 33);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"Référence commande :";
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(64, 186);
+			this->label4->Location = System::Drawing::Point(64, 147);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(321, 33);
 			this->label4->TabIndex = 3;
@@ -162,55 +141,11 @@ namespace FormsPOOcommande {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(112, 225);
+			this->label5->Location = System::Drawing::Point(112, 186);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(273, 33);
 			this->label5->TabIndex = 4;
 			this->label5->Text = L"Date commande :";
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(245, 264);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(140, 33);
-			this->label6->TabIndex = 5;
-			this->label6->Text = L"Remise :";
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(175, 303);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(210, 33);
-			this->label7->TabIndex = 6;
-			this->label7->Text = L"Prix total HT :";
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(142, 342);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(243, 33);
-			this->label8->TabIndex = 7;
-			this->label8->Text = L"Coût total TVA :";
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(159, 381);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(226, 33);
-			this->label9->TabIndex = 8;
-			this->label9->Text = L"Prix total TTC :";
 			// 
 			// textBox1
 			// 
@@ -248,64 +183,19 @@ namespace FormsPOOcommande {
 			this->textBox4->Size = System::Drawing::Size(292, 33);
 			this->textBox4->TabIndex = 12;
 			// 
-			// textBox5
-			// 
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox5->Location = System::Drawing::Point(391, 225);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(292, 33);
-			this->textBox5->TabIndex = 13;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox6->Location = System::Drawing::Point(391, 264);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(292, 33);
-			this->textBox6->TabIndex = 14;
-			// 
-			// textBox7
-			// 
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox7->Location = System::Drawing::Point(391, 303);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(292, 33);
-			this->textBox7->TabIndex = 15;
-			// 
-			// textBox8
-			// 
-			this->textBox8->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox8->Location = System::Drawing::Point(391, 342);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(292, 33);
-			this->textBox8->TabIndex = 16;
-			// 
-			// textBox9
-			// 
-			this->textBox9->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox9->Location = System::Drawing::Point(391, 381);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(292, 33);
-			this->textBox9->TabIndex = 17;
-			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(721, 69);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(447, 489);
+			this->dataGridView1->Size = System::Drawing::Size(447, 327);
 			this->dataGridView1->TabIndex = 18;
 			// 
 			// button1
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(12, 521);
+			this->button1->Location = System::Drawing::Point(12, 359);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(142, 37);
 			this->button1->TabIndex = 19;
@@ -317,7 +207,7 @@ namespace FormsPOOcommande {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(160, 521);
+			this->button2->Location = System::Drawing::Point(160, 359);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(142, 37);
 			this->button2->TabIndex = 20;
@@ -329,7 +219,7 @@ namespace FormsPOOcommande {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(308, 521);
+			this->button3->Location = System::Drawing::Point(308, 359);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(142, 37);
 			this->button3->TabIndex = 21;
@@ -365,7 +255,7 @@ namespace FormsPOOcommande {
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(391, 436);
+			this->button6->Location = System::Drawing::Point(391, 252);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(130, 37);
 			this->button6->TabIndex = 24;
@@ -377,7 +267,7 @@ namespace FormsPOOcommande {
 			// 
 			this->button7->Font = (gcnew System::Drawing::Font(L"Montserrat", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button7->Location = System::Drawing::Point(553, 436);
+			this->button7->Location = System::Drawing::Point(553, 252);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(130, 37);
 			this->button7->TabIndex = 25;
@@ -389,7 +279,7 @@ namespace FormsPOOcommande {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1180, 570);
+			this->ClientSize = System::Drawing::Size(1180, 408);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -398,22 +288,12 @@ namespace FormsPOOcommande {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->textBox7);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label9);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label7);
-			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"MyFormCommande";
@@ -435,20 +315,31 @@ namespace FormsPOOcommande {
 
 			int id_com = Int32::Parse(textBox1->Text);
 			int id_cli = Int32::Parse(textBox2->Text);
-			String^ ref_com = textBox3->Text;
-			String^ date_prevu = textBox4->Text;
-			String^ date_com = textBox5->Text;
-			String^ remise = textBox6->Text;
-			String^ prix_ht = textBox7->Text;
-			String^ cout_tva = textBox8->Text;
-			String^ prix_ttc = textBox9->Text;
+			String^ date_prevu = textBox3->Text;
+			String^ date_com = textBox4->Text;
 
-
-			MySqlCommand^ cmd = gcnew MySqlCommand("insert into commande values(" + id_com + "," + id_cli + ",'" + ref_com + "','" + date_prevu + "','" + date_com + "','" + remise + "','" + prix_ht + "','" + cout_tva + "','" + prix_ttc + "')", con);
-			MySqlDataReader^ dr;
+				// Commande
+			MySqlCommand^ cmd1 = gcnew MySqlCommand("INSERT INTO commande(ID_COMMANDE,NUMERO_CLIENT,DATE_LIVRAISON_PREVU,DATE_COMMANDE) values(" + id_com + "," + id_cli + ",'" + date_prevu + "','" + date_com + "')", con);
+			MySqlDataReader^ dr1;
 
 			con->Open();
-			dr = cmd->ExecuteReader();
+			dr1 = cmd1->ExecuteReader();
+			con->Close();
+
+				// Concatenation
+			MySqlCommand^ cmd2 = gcnew MySqlCommand("INSERT INTO concatenation VALUES((SELECT CONCAT(LEFT(client.PRENOM_CLIENT," + 2 + "),LEFT(client.NOM_CLIENT," + 2 + "),RIGHT(commande.DATE_COMMANDE," + 4 + "),LEFT(adresse.VILLE," + 3 + "),LEFT(commande.ID_COMMANDE," + 1 + ")) FROM client INNER JOIN commande ON (client.NUMERO_CLIENT = commande.NUMERO_CLIENT AND commande.ID_COMMANDE = " + id_com + ") INNER JOIN adresse ON (client.NUMERO_CLIENT = adresse.NUMERO_CLIENT_LIVRAISON))," + id_com + ")", con);
+			MySqlDataReader^ dr2;
+
+			con->Open();
+			dr2 = cmd2->ExecuteReader();
+			con->Close();
+
+			// Commande
+			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE commande SET commande.REFERENCE_COMMANDE=(SELECT REF_COM FROM concatenation WHERE concatenation.ID_COMMANDE = commande.ID_COMMANDE) WHERE commande.ID_COMMANDE=" + id_com + "", con);
+			MySqlDataReader^ dr3;
+
+			con->Open();
+			dr3 = cmd3->ExecuteReader();
 			MessageBox::Show("La commande a été enregistré");
 			con->Close();
 		}
@@ -467,20 +358,31 @@ namespace FormsPOOcommande {
 
 			int id_com = Int32::Parse(textBox1->Text);
 			int id_cli = Int32::Parse(textBox2->Text);
-			String^ ref_com = textBox3->Text;
-			String^ date_prevu = textBox4->Text;
-			String^ date_com = textBox5->Text;
-			String^ remise = textBox6->Text;
-			String^ prix_ht = textBox7->Text;
-			String^ cout_tva = textBox8->Text;
-			String^ prix_ttc = textBox9->Text;
+			String^ ref_com = "UPDATE commande SET commande.REFERENCE_COMMANDE = (SELECT REF_COM FROM concatenation WHERE concatenation.ID_COMMANDE = commande.ID_COMMANDE)";
+			String^ date_prevu = textBox3->Text;
+			String^ date_com = textBox4->Text;
 
-
-			MySqlCommand^ cmd = gcnew MySqlCommand("update commande set numero_client=" + id_cli + ",reference_commande='" + ref_com + "',date_livraison_prevu='" + date_prevu + "',date_commande='" + date_com + "',remise_panier='" + remise + "',prix_total_ht='" + prix_ht + "',cout_total_tva='" + cout_tva + "',prix_total_ttc='" + prix_ttc + "' where id_commande=" + id_com + "", con);
+			MySqlCommand^ cmd = gcnew MySqlCommand("update commande set numero_client=" + id_cli + ",date_livraison_prevu='" + date_prevu + "',date_commande='" + date_com + "' where id_commande=" + id_com + "", con);
 			MySqlDataReader^ dr;
 
 			con->Open();
 			dr = cmd->ExecuteReader();
+			con->Close();
+
+			// Concatenation
+			MySqlCommand^ cmd2 = gcnew MySqlCommand("UPDATE concatenation SET REF_COM=((SELECT CONCAT(LEFT(client.PRENOM_CLIENT," + 2 + "),LEFT(client.NOM_CLIENT," + 2 + "),RIGHT(commande.DATE_COMMANDE," + 4 + "),LEFT(adresse.VILLE," + 3 + "),LEFT(commande.ID_COMMANDE," + 1 + ")) FROM client INNER JOIN commande ON (client.NUMERO_CLIENT = commande.NUMERO_CLIENT AND commande.ID_COMMANDE = " + id_com + ") INNER JOIN adresse ON (client.NUMERO_CLIENT = adresse.NUMERO_CLIENT_LIVRAISON)), WHERE ID_COMMANDE=" + id_com + ")", con);
+			MySqlDataReader^ dr2;
+
+			con->Open();
+			dr2 = cmd2->ExecuteReader();
+			con->Close();
+
+			// Commande
+			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE commande SET commande.REFERENCE_COMMANDE=(SELECT REF_COM FROM concatenation WHERE concatenation.ID_COMMANDE = commande.ID_COMMANDE) WHERE commande.ID_COMMANDE=" + id_com + "", con);
+			MySqlDataReader^ dr3;
+
+			con->Open();
+			dr3 = cmd3->ExecuteReader();
 			MessageBox::Show("La commande a été modifié");
 			con->Close();
 		}
@@ -532,11 +434,6 @@ namespace FormsPOOcommande {
 				textBox2->Text = dr->GetString(1);
 				textBox3->Text = dr->GetString(2);
 				textBox4->Text = dr->GetString(3);
-				textBox5->Text = dr->GetString(4);
-				textBox6->Text = dr->GetString(5);
-				textBox7->Text = dr->GetString(6);
-				textBox8->Text = dr->GetString(7);
-				textBox9->Text = dr->GetString(8);
 			}
 			con->Close();
 		}
