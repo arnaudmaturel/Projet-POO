@@ -44,7 +44,19 @@ namespace FormsPOO {
 
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
-	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::RadioButton^ radioButton1;
+	private: System::Windows::Forms::RadioButton^ radioButton2;
+	private: System::Windows::Forms::RadioButton^ radioButton3;
+	private: System::Windows::Forms::RadioButton^ radioButton4;
+	private: System::Windows::Forms::RadioButton^ radioButton5;
+	private: System::Windows::Forms::RadioButton^ radioButton6;
+	private: System::Windows::Forms::RadioButton^ radioButton7;
+	private: System::Windows::Forms::RadioButton^ radioButton8;
+	private: System::Windows::Forms::RadioButton^ radioButton9;
+	private: System::Windows::Forms::RadioButton^ radioButton10;
+	private: System::Windows::Forms::RadioButton^ radioButton11;
+	private: System::Windows::Forms::RadioButton^ radioButton12;
+
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -68,7 +80,18 @@ namespace FormsPOO {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton8 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton9 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton11 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton12 = (gcnew System::Windows::Forms::RadioButton());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -88,7 +111,7 @@ namespace FormsPOO {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(342, 170);
+			this->label2->Location = System::Drawing::Point(98, 108);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(96, 32);
 			this->label2->TabIndex = 1;
@@ -122,25 +145,167 @@ namespace FormsPOO {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyFormCAMois::button1_Click);
 			// 
-			// listBox1
+			// radioButton1
 			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(12) {
-				L"Janvier", L"Février", L"Mars", L"Avril", L"Mai",
-					L"Juin", L"Juillet", L"Août", L"Septembre", L"Octobre", L"Novembre", L"Décembre"
-			});
-			this->listBox1->Location = System::Drawing::Point(533, 170);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(203, 20);
-			this->listBox1->TabIndex = 7;
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Location = System::Drawing::Point(352, 91);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(75, 21);
+			this->radioButton1->TabIndex = 7;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"Janvier";
+			this->radioButton1->UseVisualStyleBackColor = true;
+			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton1_CheckedChanged);
+			// 
+			// radioButton2
+			// 
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(352, 130);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(73, 21);
+			this->radioButton2->TabIndex = 8;
+			this->radioButton2->TabStop = true;
+			this->radioButton2->Text = L"Février";
+			this->radioButton2->UseVisualStyleBackColor = true;
+			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton2_CheckedChanged);
+			// 
+			// radioButton3
+			// 
+			this->radioButton3->AutoSize = true;
+			this->radioButton3->Location = System::Drawing::Point(352, 167);
+			this->radioButton3->Name = L"radioButton3";
+			this->radioButton3->Size = System::Drawing::Size(60, 21);
+			this->radioButton3->TabIndex = 9;
+			this->radioButton3->TabStop = true;
+			this->radioButton3->Text = L"Mars";
+			this->radioButton3->UseVisualStyleBackColor = true;
+			this->radioButton3->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton3_CheckedChanged);
+			// 
+			// radioButton4
+			// 
+			this->radioButton4->AutoSize = true;
+			this->radioButton4->Location = System::Drawing::Point(495, 91);
+			this->radioButton4->Name = L"radioButton4";
+			this->radioButton4->Size = System::Drawing::Size(56, 21);
+			this->radioButton4->TabIndex = 10;
+			this->radioButton4->TabStop = true;
+			this->radioButton4->Text = L"Avril";
+			this->radioButton4->UseVisualStyleBackColor = true;
+			this->radioButton4->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton4_CheckedChanged);
+			// 
+			// radioButton5
+			// 
+			this->radioButton5->AutoSize = true;
+			this->radioButton5->Location = System::Drawing::Point(495, 130);
+			this->radioButton5->Name = L"radioButton5";
+			this->radioButton5->Size = System::Drawing::Size(51, 21);
+			this->radioButton5->TabIndex = 11;
+			this->radioButton5->TabStop = true;
+			this->radioButton5->Text = L"Mai";
+			this->radioButton5->UseVisualStyleBackColor = true;
+			this->radioButton5->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton5_CheckedChanged);
+			// 
+			// radioButton6
+			// 
+			this->radioButton6->AutoSize = true;
+			this->radioButton6->Location = System::Drawing::Point(495, 167);
+			this->radioButton6->Name = L"radioButton6";
+			this->radioButton6->Size = System::Drawing::Size(55, 21);
+			this->radioButton6->TabIndex = 12;
+			this->radioButton6->TabStop = true;
+			this->radioButton6->Text = L"Juin";
+			this->radioButton6->UseVisualStyleBackColor = true;
+			this->radioButton6->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton6_CheckedChanged);
+			// 
+			// radioButton7
+			// 
+			this->radioButton7->AutoSize = true;
+			this->radioButton7->Location = System::Drawing::Point(636, 91);
+			this->radioButton7->Name = L"radioButton7";
+			this->radioButton7->Size = System::Drawing::Size(65, 21);
+			this->radioButton7->TabIndex = 13;
+			this->radioButton7->TabStop = true;
+			this->radioButton7->Text = L"Juillet";
+			this->radioButton7->UseVisualStyleBackColor = true;
+			this->radioButton7->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton7_CheckedChanged);
+			// 
+			// radioButton8
+			// 
+			this->radioButton8->AutoSize = true;
+			this->radioButton8->Location = System::Drawing::Point(636, 130);
+			this->radioButton8->Name = L"radioButton8";
+			this->radioButton8->Size = System::Drawing::Size(58, 21);
+			this->radioButton8->TabIndex = 14;
+			this->radioButton8->TabStop = true;
+			this->radioButton8->Text = L"Août";
+			this->radioButton8->UseVisualStyleBackColor = true;
+			this->radioButton8->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton8_CheckedChanged);
+			// 
+			// radioButton9
+			// 
+			this->radioButton9->AutoSize = true;
+			this->radioButton9->Location = System::Drawing::Point(636, 167);
+			this->radioButton9->Name = L"radioButton9";
+			this->radioButton9->Size = System::Drawing::Size(98, 21);
+			this->radioButton9->TabIndex = 15;
+			this->radioButton9->TabStop = true;
+			this->radioButton9->Text = L"Septembre";
+			this->radioButton9->UseVisualStyleBackColor = true;
+			this->radioButton9->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton9_CheckedChanged);
+			// 
+			// radioButton10
+			// 
+			this->radioButton10->AutoSize = true;
+			this->radioButton10->Location = System::Drawing::Point(786, 91);
+			this->radioButton10->Name = L"radioButton10";
+			this->radioButton10->Size = System::Drawing::Size(80, 21);
+			this->radioButton10->TabIndex = 18;
+			this->radioButton10->TabStop = true;
+			this->radioButton10->Text = L"Octobre";
+			this->radioButton10->UseVisualStyleBackColor = true;
+			this->radioButton10->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton10_CheckedChanged);
+			// 
+			// radioButton11
+			// 
+			this->radioButton11->AutoSize = true;
+			this->radioButton11->Location = System::Drawing::Point(786, 130);
+			this->radioButton11->Name = L"radioButton11";
+			this->radioButton11->Size = System::Drawing::Size(94, 21);
+			this->radioButton11->TabIndex = 17;
+			this->radioButton11->TabStop = true;
+			this->radioButton11->Text = L"Novembre";
+			this->radioButton11->UseVisualStyleBackColor = true;
+			this->radioButton11->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton11_CheckedChanged);
+			// 
+			// radioButton12
+			// 
+			this->radioButton12->AutoSize = true;
+			this->radioButton12->Location = System::Drawing::Point(786, 167);
+			this->radioButton12->Name = L"radioButton12";
+			this->radioButton12->Size = System::Drawing::Size(94, 21);
+			this->radioButton12->TabIndex = 16;
+			this->radioButton12->TabStop = true;
+			this->radioButton12->Text = L"Décembre";
+			this->radioButton12->UseVisualStyleBackColor = true;
+			this->radioButton12->CheckedChanged += gcnew System::EventHandler(this, &MyFormCAMois::radioButton12_CheckedChanged);
 			// 
 			// MyFormCAMois
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1034, 557);
-			this->Controls->Add(this->listBox1);
+			this->Controls->Add(this->radioButton10);
+			this->Controls->Add(this->radioButton11);
+			this->Controls->Add(this->radioButton12);
+			this->Controls->Add(this->radioButton9);
+			this->Controls->Add(this->radioButton8);
+			this->Controls->Add(this->radioButton7);
+			this->Controls->Add(this->radioButton6);
+			this->Controls->Add(this->radioButton5);
+			this->Controls->Add(this->radioButton4);
+			this->Controls->Add(this->radioButton3);
+			this->Controls->Add(this->radioButton2);
+			this->Controls->Add(this->radioButton1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label3);
@@ -154,26 +319,70 @@ namespace FormsPOO {
 
 		}
 #pragma endregion
+	static String^ Month;
+	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "01";
+}
+	private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "02";
+}
+	private: System::Void radioButton3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "03";
+}
+	private: System::Void radioButton4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "04";
+}
+	private: System::Void radioButton5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "05";
+}
+	private: System::Void radioButton6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "06";
+}
+	private: System::Void radioButton7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "07";
+}
+	private: System::Void radioButton8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "08";
+}
+	private: System::Void radioButton9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "09";
+}
+	private: System::Void radioButton10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "10";
+}
+	private: System::Void radioButton11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "11";
+}
+	private: System::Void radioButton12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		Month = "12";
+}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		try {
 			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
-			int Year = Int32::Parse(textBox1->/**/);
-			int Month =;
-
+			int Year = Int32::Parse(textBox1->Text);
+			int DayE;
 			//requête: 
-			if (Month == " ")
-			{
-
+			if (Month == "04" || Month == "06" || Month == "09" || Month == "11") {
+				DayE = 30;
 			}
-			MySqlCommand^ cmd = gcnew MySqlCommand("SELECT SUM(paiement.MONTANT_PAIEMENT) AS ChiffeDAffaire FROM paiement WHERE paiement.DATE_PAIEMENT BETWEEN"+/*AAAA+"-"+MM*/+"-"+DayB+"AND"AAAA"+"-"+"MM"-"+ DayE, con);
+			else if (Month == "02") {
+				DayE = 28;
+			}
+			else {
+				DayE = 31;
+			}
+			MySqlCommand^ cmd = gcnew MySqlCommand("SELECT SUM(paiement.MONTANT_PAIEMENT) AS ChiffeDAffaire FROM paiement WHERE paiement.DATE_PAIEMENT BETWEEN " + Year + "-" + Month + "-01 AND " + Year + "-" + Month + "-" + DayE, con);
 			MySqlDataReader^ dr;
 
 			con->Open();
 			dr = cmd->ExecuteReader();
-			//MessageBox::Show(contenu);
+			MessageBox::Show();
 			con->Close();
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
 		}
 	}
 };
