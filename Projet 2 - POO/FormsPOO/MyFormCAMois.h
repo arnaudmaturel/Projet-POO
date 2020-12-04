@@ -391,7 +391,7 @@ namespace FormsPOO {
 				DayE = 31;
 			}
 
-			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT SUM(paiement.MONTANT_PAIEMENT) AS ChiffeDAffaire FROM paiement WHERE paiement.DATE_PAIEMENT BETWEEN " + Year + "-" + Month + "-01 AND " + Year + "-" + Month + "-" + DayE, con);
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT SUM(commande.PRIX_TOTAL_TTC) AS ChiffeDAffaire FROM commande WHERE commande.DATE_COMMANDE BETWEEN " + Year + "-" + Month + "-01 AND " + Year + "-" + Month + "-" + DayE, con);
 			DataTable^ dt = gcnew DataTable();
 			sda->Fill(dt);
 			bindingSource1->DataSource = dt;
