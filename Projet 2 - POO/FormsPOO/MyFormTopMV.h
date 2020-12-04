@@ -120,7 +120,7 @@ namespace FormsPOO {
 			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
-			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT article.DESIGNATION AS Top10DesPlusVendus FROM article, integrer WHERE article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE LIMIT 10;", con);
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT article.DESIGNATION, calcul_quantite_article.QUANTITE AS Top10DesMoinsVendus FROM article INNER JOIN calcul_quantite_article WHERE article.REFERENCE_ARTICLE = calcul_quantite_article.REF_ART ORDER BY calcul_quantite_article.QUANTITE DESC LIMIT 10", con);
 			DataTable^ dt = gcnew DataTable();
 			sda->Fill(dt);
 			bindingSource1->DataSource = dt;
