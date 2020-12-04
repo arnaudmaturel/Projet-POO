@@ -355,7 +355,6 @@ namespace FormsPOOadresse {
 			dr1 = cmd1->ExecuteReader();
 			while (dr1->Read())
 			{
-				//textBox2->Text = dr1->GetString(1);
 				textBox3->Text = dr1->GetString(3);
 				textBox4->Text = dr1->GetString(4);
 				textBox5->Text = dr1->GetString(5);

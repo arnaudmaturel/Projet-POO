@@ -41,22 +41,12 @@ namespace FormsPOOcommande {
 	private: System::Windows::Forms::Label^ label1;
 	protected:
 	private: System::Windows::Forms::Label^ label2;
-
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
-
-
-
-
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox4;
-
-
-
-
-
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Button^ button1;
@@ -334,7 +324,7 @@ namespace FormsPOOcommande {
 			dr2 = cmd2->ExecuteReader();
 			con->Close();
 
-			// Commande
+				// Implémentation de la référence de la commande
 			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE commande SET commande.REFERENCE_COMMANDE=(SELECT REF_COM FROM concatenation WHERE concatenation.ID_COMMANDE = commande.ID_COMMANDE) WHERE commande.ID_COMMANDE=" + id_com + "", con);
 			MySqlDataReader^ dr3;
 
@@ -377,7 +367,7 @@ namespace FormsPOOcommande {
 			dr2 = cmd2->ExecuteReader();
 			con->Close();
 
-			// Commande
+			// Commande - référence
 			MySqlCommand^ cmd3 = gcnew MySqlCommand("UPDATE commande SET commande.REFERENCE_COMMANDE=(SELECT REF_COM FROM concatenation WHERE concatenation.ID_COMMANDE = commande.ID_COMMANDE) WHERE commande.ID_COMMANDE=" + id_com + "", con);
 			MySqlDataReader^ dr3;
 
@@ -449,7 +439,7 @@ namespace FormsPOOcommande {
 		{
 			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 			MySqlConnection^ con = gcnew MySqlConnection(constr);
-			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select id_commande,reference_commande,date_livraison_prevu,date_commande,remise_panier,prix_total_ht,cout_total_tva,prix_total_ttc,client.numero_client,client.nom_client,client.prenom_client from commande inner join client where commande.numero_client=client.numero_client", con);
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select id_commande,reference_commande,date_livraison_prevu,date_commande,remise_panier,prix_total_ht,cout_total_tva,prix_total_ttc,client.numero_client,client.nom_client,client.prenom_client from commande inner join client on commande.numero_client=client.numero_client", con);
 			DataTable^ dt = gcnew DataTable();
 
 			sda->Fill(dt);
