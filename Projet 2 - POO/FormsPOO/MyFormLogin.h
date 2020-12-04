@@ -26,10 +26,11 @@ namespace FormsPOOlog {
 			//
 		}
 
-	public: String^ SERV;
+
+	/*public: String^ SERV;
 	public: String^ IDENT;
 	public: String^ MDP;
-	public: String^ BDD;
+	public: String^ BDD;*/
 
 	protected:
 		/// <summary>
@@ -221,7 +222,7 @@ namespace FormsPOOlog {
 #pragma endregion
 	private: System::Void Login_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ constr = "Server= " + SERV + ";Uid= " + IDENT + ";Pwd= " + MDP + ";Database= " + BDD + "";
+		String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 		MySqlConnection^ con = gcnew MySqlConnection(constr);
 
 		try

@@ -317,6 +317,21 @@ namespace FormsPOOarticleCom {
 			dr3 = cmd3->ExecuteReader();
 			con->Close();
 
+			// Update quantite article
+			MySqlCommand^ cmd6 = gcnew MySqlCommand("INSERT INTO calcul_quantite_article(ref_art) VALUES(" + ref_art + ")", con);
+			MySqlDataReader^ dr6;
+
+			con->Open();
+			dr6 = cmd6->ExecuteReader();
+			con->Close();
+
+			MySqlCommand^ cmd7 = gcnew MySqlCommand("UPDATE calcul_quantite_article SET QUANTITE=(SELECT SUM(integrer.QUANTITE_ARTICLE_COMMANDE) FROM integrer INNER JOIN article ON integrer.REFERENCE_ARTICLE = article.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND article.REFERENCE_ARTICLE = " + ref_art + ") WHERE REF_ART = " + ref_art + "", con);
+			MySqlDataReader^ dr7;
+
+			con->Open();
+			dr7 = cmd7->ExecuteReader();
+			con->Close();
+
 			// Update du calcul des prix
 			MySqlCommand^ cmd4 = gcnew MySqlCommand("UPDATE prix_commande SET PRIX_HT=(SELECT article.PRIX_HT * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "), COUT_TVA=(SELECT (((article.TAUX_TVA / " + 100 + ") * article.PRIX_HT) * integrer.QUANTITE_ARTICLE_COMMANDE) FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + "),PRIX_TTC=(SELECT article.PRIX_TTC * integrer.QUANTITE_ARTICLE_COMMANDE FROM article INNER JOIN integrer ON article.REFERENCE_ARTICLE = integrer.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND integrer.ID_COMMANDE = " + id_com + ") WHERE ID_COMMANDE = " + id_com + " AND ID_ARTICLE = " + ref_art + "", con);
 			MySqlDataReader^ dr4;
@@ -364,6 +379,14 @@ namespace FormsPOOarticleCom {
 
 			con->Open();
 			dr3 = cmd3->ExecuteReader();
+			con->Close();
+
+			// Update quantite article
+			MySqlCommand^ cmd7 = gcnew MySqlCommand("UPDATE calcul_quantite_article SET QUANTITE=(SELECT SUM(integrer.QUANTITE_ARTICLE_COMMANDE) FROM integrer INNER JOIN article ON integrer.REFERENCE_ARTICLE = article.REFERENCE_ARTICLE WHERE integrer.REFERENCE_ARTICLE = " + ref_art + " AND article.REFERENCE_ARTICLE = " + ref_art + ") WHERE REF_ART = " + ref_art + "", con);
+			MySqlDataReader^ dr7;
+
+			con->Open();
+			dr7 = cmd7->ExecuteReader();
 			con->Close();
 
 			// Update du calcul des prix

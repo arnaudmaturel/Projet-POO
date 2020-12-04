@@ -15,17 +15,6 @@ namespace FormsPOOpersonnel {
 	/// </summary>
 	public ref class MyFormPersonnel : public System::Windows::Forms::Form
 	{
-
-	public: String^ serv;
-	public: String^ ident;
-	public: String^ mdp;
-
-	public:
-
-
-
-	public: String^ bdd;
-
 	public:
 		MyFormPersonnel(void)
 		{
@@ -34,6 +23,11 @@ namespace FormsPOOpersonnel {
 			//TODO: ajoutez ici le code du constructeur
 			//
 		}
+
+	public: String^ serv;
+	public: String^ ident;
+	public: String^ mdp;
+	public: String^ bdd;
 
 	protected:
 		/// <summary>
