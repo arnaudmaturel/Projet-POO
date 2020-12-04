@@ -246,7 +246,7 @@ namespace FormsPOOstats {
 			label12->AutoSize = true;
 			label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			label12->Location = System::Drawing::Point(348, 19);
+			label12->Location = System::Drawing::Point(368, 19);
 			label12->Name = L"label12";
 			label12->Size = System::Drawing::Size(474, 32);
 			label12->TabIndex = 11;
@@ -337,7 +337,7 @@ namespace FormsPOOstats {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1205, 611);
+			this->ClientSize = System::Drawing::Size(1228, 611);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);

@@ -119,7 +119,7 @@ namespace FormsPOO {
 			String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
 			MySqlConnection^ con = gcnew MySqlConnection(constr);
 
-			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("Select * from article", con);
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("Select * from 'article'", con);
 			DataTable^ dt = gcnew DataTable();
 			sda->Fill(dt);
 			bindingSource1->DataSource = dt;

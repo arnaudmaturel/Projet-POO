@@ -8,6 +8,7 @@ namespace FormsPOO {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace MySql::Data::MySqlClient;
 
 	/// <summary>
 	/// Description résumée de MyformMontant
@@ -43,6 +44,9 @@ namespace FormsPOO {
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Label^ label2;
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -69,6 +73,9 @@ namespace FormsPOO {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
@@ -87,7 +94,7 @@ namespace FormsPOO {
 			// Nom_client
 			// 
 			this->Nom_client->AutoSize = true;
-			this->Nom_client->Location = System::Drawing::Point(21, 149);
+			this->Nom_client->Location = System::Drawing::Point(32, 127);
 			this->Nom_client->Name = L"Nom_client";
 			this->Nom_client->Size = System::Drawing::Size(74, 17);
 			this->Nom_client->TabIndex = 1;
@@ -96,7 +103,7 @@ namespace FormsPOO {
 			// Prenom_client
 			// 
 			this->Prenom_client->AutoSize = true;
-			this->Prenom_client->Location = System::Drawing::Point(12, 195);
+			this->Prenom_client->Location = System::Drawing::Point(12, 181);
 			this->Prenom_client->Name = L"Prenom_client";
 			this->Prenom_client->Size = System::Drawing::Size(94, 17);
 			this->Prenom_client->TabIndex = 2;
@@ -104,14 +111,14 @@ namespace FormsPOO {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(130, 146);
+			this->textBox1->Location = System::Drawing::Point(130, 127);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(209, 22);
 			this->textBox1->TabIndex = 3;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(130, 195);
+			this->textBox2->Location = System::Drawing::Point(130, 176);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(209, 22);
 			this->textBox2->TabIndex = 4;
@@ -128,18 +135,48 @@ namespace FormsPOO {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(151, 264);
+			this->button1->Location = System::Drawing::Point(36, 266);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(136, 35);
 			this->button1->TabIndex = 6;
 			this->button1->Text = L"Rechercher";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyformMontant::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(188, 266);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(142, 34);
+			this->button2->TabIndex = 7;
+			this->button2->Text = L"Calculer";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyformMontant::button2_Click);
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(130, 225);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(208, 22);
+			this->textBox3->TabIndex = 8;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(85, 228);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(21, 17);
+			this->label2->TabIndex = 9;
+			this->label2->Text = L"ID";
 			// 
 			// MyformMontant
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(823, 524);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->textBox2);
@@ -156,5 +193,35 @@ namespace FormsPOO {
 
 		}
 #pragma endregion
-	};
+		String^ ID_Client; 
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ NomClient = textBox1->Text;
+		String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		MySqlCommand^ cmd = gcnew MySqlCommand("SELECT * FROM `client` WHERE `NOM_CLIENT`='"+NomClient+"'", con);
+		con->Open();
+		MySqlDataReader^ dr = cmd->ExecuteReader();
+		while (dr->Read()){
+			textBox2->Text = dr->GetString(2);
+			ID_Client = dr->GetString(0);
+			textBox3->Text = dr->GetString(0);
+		}
+		con->Close();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constr = "Server=127.0.0.1;Uid=root;Pwd=;Database=projetpoo";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+
+		try {
+			MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT SUM(commande.PRIX_TOTAL_TTC) AS MontantTotalDesAchats FROM commande WHERE commande.NUMERO_CLIENT =" + ID_Client, con);
+			DataTable^ dt = gcnew DataTable();
+			sda->Fill(dt);
+			bindingSource1->DataSource = dt;
+			dataGridView1->DataSource = bindingSource1;
+		}
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
+	}
+};
 }
